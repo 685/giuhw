@@ -1,5 +1,4 @@
 import type {NextApiRequest, NextApiResponse} from 'next'
-import useFetch from "../../src/hooks/useFetch";
 import axios from "axios";
 
 
@@ -23,10 +22,10 @@ export default async function handler(
 
     if (response.status.toString().startsWith('2')) {
         res.status(200).json(response.data)
+    } else {
+
+        res.status(500).json({message: 'Something went wrong while fetching data from the server.'})
     }
-
-    res.status(500).json({message: 'Something went wrong while fetching data from the server.'})
-
 
 
 }
