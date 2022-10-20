@@ -45,6 +45,7 @@ const DImage = ({item, w, h}: IDImageProps) => {
                     <div className={styles.DImage__action__category}>
 
                         {item.category}
+                        {item.channel}
 
                     </div>
 

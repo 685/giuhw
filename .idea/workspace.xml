@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Cannot set headers after they are sent to the client error">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useFetchImages.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useInput.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/images.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +33,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.rcb.function_component" />
         <option value="com.haulmont.rcb.arrow_function_component" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="com.haulmont.rcb.function_component" />
       </list>
     </option>
   </component>
@@ -36,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "P:/PyCharm/Projects/giuhw",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "P:\\PyCharm\\Projects\\giuhw\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;P:/PyCharm/Projects/giuhw&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;P:\\PyCharm\\Projects\\giuhw\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
         <entry key="com.haulmont.rcb.reactComponents" value="false" />
-        <entry key="com.haulmont.rcb.reactInspector" value="true" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
       </map>
     </option>
   </component>
@@ -91,8 +107,30 @@
       <workItem from="1665252470114" duration="4147000" />
       <workItem from="1665303275872" duration="437000" />
       <workItem from="1666010443547" duration="5143000" />
-      <workItem from="1666016116296" duration="3389000" />
+      <workItem from="1666016116296" duration="4224000" />
+      <workItem from="1666028417375" duration="136000" />
+      <workItem from="1666193378379" duration="6984000" />
+      <workItem from="1666204202330" duration="7000" />
+      <workItem from="1666210090999" duration="1845000" />
+      <workItem from="1666275501398" duration="7644000" />
+      <workItem from="1666292290903" duration="2086000" />
+      <workItem from="1666295018149" duration="1373000" />
     </task>
+    <task id="LOCAL-00001" summary="[START] - INIT">
+      <created>1666019598750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666019598750</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[FIX] - Cannot set headers after they are sent to the client error">
+      <created>1666020036902</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666020036902</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +146,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[START] - INIT" />
+    <MESSAGE value="[FIX] - Cannot set headers after they are sent to the client error" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Cannot set headers after they are sent to the client error" />
   </component>
 </project>

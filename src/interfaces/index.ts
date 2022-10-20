@@ -1,6 +1,7 @@
 
-interface T {
+export type TFilterIdDataType = string;
 
+interface T {
 }
 
 export interface IImageItem extends T {
@@ -16,7 +17,16 @@ export interface IImageItem extends T {
 export interface IFilterOption extends T {
 
     name: string;
-    id: number;
+    id: TFilterIdDataType;
+}
+
+
+export enum EFilterOptions  {
+    pop_anime="Popular anime",
+    pop_games="Popular games",
+    nsfw="nsfw",
+    nsfw2="nsfw part 2",
+    nsfw_cats="NSFW categories",
 }
 
 export interface IFilterOptions extends T {
@@ -24,7 +34,7 @@ export interface IFilterOptions extends T {
     "Popular anime": IFilterOption[];
     nsfw: IFilterOption[];
     "nsfw part 2": IFilterOption[];
-    "Popular games": IFilterOption[];
+    "popular games": IFilterOption[];
 }
 
 export interface IFetchImagesResponse extends T {
