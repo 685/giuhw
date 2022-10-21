@@ -1,30 +1,82 @@
-.DImage {
-  outline: none;
+$modalWidth: 750px;
 
-  & > * {
-    outline: none;
+// gradient from top to bottom with 2 colors
+// gradient should blacked out
+$gradient: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+);
+
+.imageContainer {
+  position: relative;
+  &:not([data-notmodal]) {
+    max-width: $modalWidth;
+
+     img, video {
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       transition: transform 400ms ease-out;
+     }
   }
 
-  max-width: max-content;
+  &[data-notmodal] {
 
-  &.notModal {
-    cursor: pointer;
-  }
+    /* Minimum width of 24rem and grow to fit available space */
+    flex: 1 0 24rem;
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    min-height: 300px;
 
-  span img {
+    img, video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms ease-out;
 
-    border-radius: 4px;
-  }
+      &:hover {
+        transform: scale(1.15);
+      }
 
-  &:not(.notModal) {
-    span img {
-      width: 700px !important;
-    height: 700px !important;
     }
+
+    .isVideo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .5rem;
+
+      &__text {
+        pointer-events: none;
+        color: lightblue;
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+
+
+      }
+
+    }
+
   }
 
+  max-width: $modalWidth;
 
-  &__action {
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #fff;
+    background: $gradient; //rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 4px;
+    pointer-events: none;
 
     &__category {
 

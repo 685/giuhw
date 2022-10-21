@@ -5,15 +5,8 @@ import {
     IFilterOptions,
     TFilterIdDataType
 } from "@/src/interfaces";
-import {
-    Button,
-    Checkbox,
-    FormControlLabel,
-    FormGroup,
-    IconButton
-} from '@mui/material';
+import {Button, Checkbox, FormControlLabel, FormGroup} from '@mui/material';
 import {Check} from "@mui/icons-material";
-import {inspect} from "util";
 import styles from "./FilterImages.module.scss";
 
 interface IFilterImagesProps {
@@ -51,20 +44,19 @@ export const FilterCategory = ({
     }
 
     return (
-        <div>
-            <div>
+        <div className={styles.category}>
+            <div className={styles.category__title}>
                 <span>
                     {title}
                 </span>
             </div>
 
-            <FormGroup>
+            <FormGroup className={styles.category__group}>
                 {filters.map((_, index) => {
                         return (<FormControlLabel key={index}
                                                   control={<Checkbox
                                                       onChange={toggleFilter(_.id)}/>}
-                                                  label={_.name}
-                        style={{marginLeft: 10, marginTop: 2}}/>)
+                                                  label={_.name}/>)
                     }
                 )}
 
@@ -106,27 +98,50 @@ const FilterImages = (
     }, [filters]);
 
     useEffect(() => {
-
+        const equals = (a: Array<TFilterIdDataType>, b: Array<TFilterIdDataType>) => JSON.stringify(a) === JSON.stringify(b)
         // if one of the values is not equals to the previous one, set `isChanged` to true
-        const isChanged = previousData === undefined || (
-            previousData._amount !== amount ||
-            previousData._offset !== offset ||
-            previousData._categories !== filters
-        );
+        let isChanged = false;
+        if (previousData !== undefined) {
+            if (previousData._amount !== amount) {
+                isChanged = true;
+            }
+            if (previousData._offset !== offset) {
+                isChanged = true;
+
+            }
+            if (!equals(previousData._categories, filters)) {
+                isChanged = true;
+            }
+            console.log("Equals", equals(previousData?._categories, filters))
+            console.log("!Equals", !equals(previousData?._categories, filters))
+        }
+        else {
+            setPreviousData({
+                _amount: amount,
+                _offset: offset,
+                _categories: filters
+            }
+            )
+        }
+
+        console.log("Prev data", previousData)
 
         setIsChanged(isChanged);
 
     }, [amount, offset, filters, previousData]);
 
-    const onChange = () =>
-    {
-        setPreviousData({_amount: amount, _offset: offset, _categories: filters});
+    const onChange = () => {
+        setPreviousData({
+            _amount: amount,
+            _offset: offset,
+            _categories: filters
+        });
         change({_amount: amount, _categories: filters, _offset: offset})
     }
 
 
     return (
-        <div>
+        <div className={styles.filter}>
             <FilterCategory assignedFilters={filters} addFilter={addFilter}
                             removeFilter={removeFilter}
                             filters={filterOptions["popular games"]}
@@ -148,9 +163,15 @@ const FilterImages = (
                             filters={filterOptions["nsfw part 2"]}
                             title={"nsfw part 2"}/>
 
-            <Button onClick={onChange} size={"large"} aria-label="delete" color={"info"} style={{backgroundColor: "limegreen"}} className={styles.button} disabled={!isChanged}>
-                <Check/>
-            </Button>
+            {isChanged &&
+                <Button onClick={onChange} size={"large"} aria-label="delete"
+                        color={"info"} style={{
+                    backgroundColor: "limegreen", position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                }} className={styles.button} disabled={!isChanged}>
+                    <Check/>
+                </Button>}
 
         </div>
     );

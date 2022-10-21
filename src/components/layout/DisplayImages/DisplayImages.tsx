@@ -1,7 +1,7 @@
 import {IFilterOptions, IImageItem} from "@/src/interfaces";
 import {useEffect, useState} from "react";
 import DImage from "@/components/layout/DisplayImages/ui/DImage/DImage";
-import {Grid} from "@mui/material";
+import styles from "./DisplayImages.module.scss";
 import useInput from "@/hooks/useInput";
 import useFetchImages from "@/hooks/useFetchImages";
 import FilterImages from "@/components/layout/filterImages/FilterImages";
@@ -67,15 +67,14 @@ export function DisplayImages({count}: IDisplayImagesProps) {
                 {data !== null && (
                     <FilterImages filters={data.filterOptions} change={change}/>
                 )}
-                <Grid container spacing={8} gap={16} sx={{marginLeft: 20}}>
+                <div className={styles.imagesGrid}>
 
-                {currentItems && currentItems.map((item: IImageItem) => (
-                    <DImage key={item.id} item={item} w={"300px"} h={"300px"}/>
-                ))}
+                    {currentItems && currentItems.map((item: IImageItem) => (
+                        <DImage key={item.id} item={item} w={300} h={300}/>
+                    ))}
 
-            </Grid>
+                </div>
             </div>
-
 
 
         </div>

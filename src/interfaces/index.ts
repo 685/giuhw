@@ -5,6 +5,7 @@ interface T {
 }
 
 export interface IImageItem extends T {
+    isVideo: boolean;
     id: string;
     url: string;
     channel: string;

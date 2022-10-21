@@ -58,6 +58,16 @@ const createURL = (
     return `${config.apiUrl.current}${amountString}/${offsetString}/${categoriesString}`
 }
 
+const isVideo = (url: string): boolean => {
+    const videoExtensions = ["mp4", "webm", "ogg", "MOV", 'mov'];
+    const extension = url.split(".").pop();
+
+    if (extension) {
+        return videoExtensions.includes(extension);
+    }
+    return false;
+}
+
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
@@ -86,12 +96,9 @@ export default async function handler(
                 return;
             }
 
-            let filterOptions = data.filterOptions;
-            filterOptions.nsfw.filter(Number)
-            filterOptions["NSFW categories"].filter(Number)
-            filterOptions["nsfw part 2"] .filter(Number)
-            filterOptions["Popular anime"].filter(Number)
-            filterOptions["popular games"].filter(Number)
+            for(let item of data.imageList) {
+                item.isVideo = isVideo(item.url);
+            }
 
             res.status(200).json(data)
             return;

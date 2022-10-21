@@ -9,3 +9,25 @@
   }
 
 }
+
+.filter {
+  color: var(--text-primary);
+}
+
+.category {
+  &__title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  &__group {
+    color: var(--text-secondary);
+
+    label {
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+  }
+}

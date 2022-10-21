@@ -1,0 +1,13 @@
+.imagesGrid {
+
+  // create a gallery where the images are displayed in a grid
+  // every row has up to 3 images
+
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+
+
+
+}
