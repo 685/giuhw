@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/aside.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/images.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +31,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.haulmont.rcb.arrow_function_component" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="package.json" />
         <option value="com.haulmont.rcb.function_component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -119,7 +116,9 @@
       <workItem from="1666343324965" duration="896000" />
       <workItem from="1666351203704" duration="6748000" />
       <workItem from="1666367094550" duration="4493000" />
-      <workItem from="1666373242796" duration="3389000" />
+      <workItem from="1666373242796" duration="4507000" />
+      <workItem from="1666385920324" duration="1158000" />
+      <workItem from="1666388932109" duration="3032000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -142,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666296815939</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <created>1666377247205</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666377247205</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

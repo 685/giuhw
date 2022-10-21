@@ -10,20 +10,22 @@ $gradient: linear-gradient(
 
 .imageContainer {
   position: relative;
-  &:not([data-notmodal]) {
-    max-width: $modalWidth;
 
-     img, video {
-       display: block;
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-       transition: transform 400ms ease-out;
-     }
+  &:not([data-notmodal]) {
+    min-width: max-content;
+
+    img, video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 400ms ease-out;
+    }
   }
 
   &[data-notmodal] {
-
+    border-radius: 4px;
+    cursor: pointer;
     /* Minimum width of 24rem and grow to fit available space */
     flex: 1 0 24rem;
     /* Margin value should be half of grid-gap value as margins on flex items don't collapse */

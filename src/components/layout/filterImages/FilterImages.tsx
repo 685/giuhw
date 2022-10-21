@@ -5,9 +5,17 @@ import {
     IFilterOptions,
     TFilterIdDataType
 } from "@/src/interfaces";
-import {Button, Checkbox, FormControlLabel, FormGroup} from '@mui/material';
+import {
+    Button,
+    Checkbox,
+    Drawer,
+    FormControlLabel,
+    FormGroup
+} from '@mui/material';
 import {Check} from "@mui/icons-material";
 import styles from "./FilterImages.module.scss";
+import {observer} from "mobx-react-lite";
+import AsideStore from "@/src/stores/aside";
 
 interface IFilterImagesProps {
     change: ({
@@ -75,6 +83,7 @@ const FilterImages = (
 
     const baseAmount = 30;
 
+
     const [previousData, setPreviousData] = useState<IUseFetchImagesInitialStateProps | undefined>(undefined);
     const [isChanged, setIsChanged] = useState<boolean>(false);
 
@@ -114,13 +123,12 @@ const FilterImages = (
             }
             console.log("Equals", equals(previousData?._categories, filters))
             console.log("!Equals", !equals(previousData?._categories, filters))
-        }
-        else {
+        } else {
             setPreviousData({
-                _amount: amount,
-                _offset: offset,
-                _categories: filters
-            }
+                    _amount: amount,
+                    _offset: offset,
+                    _categories: filters
+                }
             )
         }
 
@@ -141,40 +149,59 @@ const FilterImages = (
 
 
     return (
-        <div className={styles.filter}>
-            <FilterCategory assignedFilters={filters} addFilter={addFilter}
-                            removeFilter={removeFilter}
-                            filters={filterOptions["popular games"]}
-                            title={"Popular games"}/>
-            <FilterCategory assignedFilters={filters} addFilter={addFilter}
-                            removeFilter={removeFilter}
-                            filters={filterOptions["NSFW categories"]}
-                            title={"NSFW categories"}/>
-            <FilterCategory assignedFilters={filters} addFilter={addFilter}
-                            removeFilter={removeFilter}
-                            filters={filterOptions["nsfw"]}
-                            title={"nsfw"}/>
-            <FilterCategory assignedFilters={filters} addFilter={addFilter}
-                            removeFilter={removeFilter}
-                            filters={filterOptions["Popular anime"]}
-                            title={"Popular anime"}/>
-            <FilterCategory assignedFilters={filters} addFilter={addFilter}
-                            removeFilter={removeFilter}
-                            filters={filterOptions["nsfw part 2"]}
-                            title={"nsfw part 2"}/>
+        <>
 
-            {isChanged &&
-                <Button onClick={onChange} size={"large"} aria-label="delete"
-                        color={"info"} style={{
-                    backgroundColor: "limegreen", position: "fixed",
-                    bottom: 0,
-                    left: 0,
-                }} className={styles.button} disabled={!isChanged}>
-                    <Check/>
-                </Button>}
+            <Drawer
+                anchor={"left"}
+                open={AsideStore.asideVisible}
+                onClose={AsideStore.closeAside}
+            >
+                <div className={styles.filter}>
 
-        </div>
+                    <FilterCategory assignedFilters={filters}
+                                    addFilter={addFilter}
+                                    removeFilter={removeFilter}
+                                    filters={filterOptions["popular games"]}
+                                    title={"Popular games"}/>
+                    <FilterCategory assignedFilters={filters}
+                                    addFilter={addFilter}
+                                    removeFilter={removeFilter}
+                                    filters={filterOptions["NSFW categories"]}
+                                    title={"NSFW categories"}/>
+                    <FilterCategory assignedFilters={filters}
+                                    addFilter={addFilter}
+                                    removeFilter={removeFilter}
+                                    filters={filterOptions["nsfw"]}
+                                    title={"nsfw"}/>
+                    <FilterCategory assignedFilters={filters}
+                                    addFilter={addFilter}
+                                    removeFilter={removeFilter}
+                                    filters={filterOptions["Popular anime"]}
+                                    title={"Popular anime"}/>
+                    <FilterCategory assignedFilters={filters}
+                                    addFilter={addFilter}
+                                    removeFilter={removeFilter}
+                                    filters={filterOptions["nsfw part 2"]}
+                                    title={"nsfw part 2"}/>
+
+                    {isChanged &&
+                        <Button onClick={onChange} size={"large"}
+                                aria-label="delete"
+                                color={"info"} style={{
+                            backgroundColor: "limegreen", position: "fixed",
+                            bottom: 0,
+                            left: 0,
+                        }} className={styles.button} disabled={!isChanged}>
+                            <Check/>
+                        </Button>}
+
+
+                </div>
+
+            </Drawer>
+        </>
+
     );
 };
 
-export default FilterImages;
+export default observer(FilterImages);

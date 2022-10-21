@@ -1,18 +1,20 @@
-$discord-btn-color: rgb(88, 101, 242);
 
 .header {
-  padding: 8px;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .buttonWrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .button {
-  background-color: $discord-btn-color;
+  background-color: var(--discord-btn-color);
 
   color: #fff;
   max-width: max-content;

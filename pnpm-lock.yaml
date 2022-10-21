@@ -12,6 +12,7 @@ specifiers:
   axios: ^1.1.2
   eslint: 8.25.0
   eslint-config-next: 12.3.1
+  mobx-react-lite: ^3.4.0
   next: 12.3.1
   react: 18.2.0
   react-dom: 18.2.0
@@ -26,6 +27,7 @@ dependencies:
   '@mui/material': 5.10.9_ikcgkdnp4bn3rgptamntbhbo7e
   '@mui/styles': 5.10.9_iapumuv4e6jcjznwuxpf4tt22e
   axios: 1.1.2
+  mobx-react-lite: 3.4.0_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_2mygebwfgdyopr3fy2qddu2eli
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2018,6 +2020,23 @@ packages:
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
+
+  /mobx-react-lite/3.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-bRuZp3C0itgLKHu/VNxi66DN/XVkQG7xtoBVWxpvC5FhAqbOCP21+nPhULjnzEqd7xBMybp6KwytdUpZKEgpIQ==}
+    peerDependencies:
+      mobx: ^6.1.0
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
