@@ -7,10 +7,11 @@ import {
 } from "@/src/interfaces";
 import {
     Button,
-    Checkbox,
+    Checkbox, CircularProgress,
     Drawer,
     FormControlLabel,
-    FormGroup
+    FormGroup,
+    Skeleton
 } from '@mui/material';
 import {Check} from "@mui/icons-material";
 import styles from "./FilterImages.module.scss";
@@ -24,6 +25,8 @@ interface IFilterImagesProps {
                  _categories
              }: IUseFetchImagesInitialStateProps) => void;
     filters: IFilterOptions;
+    loading: boolean;
+    error: null | any;
 }
 
 type IFilterActionFunctionType = (filter: TFilterIdDataType) => () => void;
@@ -63,7 +66,7 @@ export const FilterCategory = ({
                 {filters.map((_, index) => {
                         return (<FormControlLabel key={index}
                                                   control={<Checkbox
-                                                      onChange={toggleFilter(_.id)}/>}
+                                                      onChange={toggleFilter(_.id)} defaultChecked={assignedFilters.includes(_.id)}/>}
                                                   label={_.name}/>)
                     }
                 )}
@@ -76,8 +79,23 @@ export const FilterCategory = ({
 
 }
 
+const FilterLoading = () => {
+
+    return (
+
+        <div className={styles.loadingItem}>
+
+            <CircularProgress />
+
+        </div>
+        //
+        // <Skeleton variant="rounded" style={{width: "80%", height: "40vh"}}/>
+    )
+
+}
+
 const FilterImages = (
-    {change, filters: filterOptions}: IFilterImagesProps
+    {change, filters: filterOptions, loading, error}: IFilterImagesProps
 ) => {
     // Just saves some data, and calls `change` function on submit button click 
 
@@ -158,46 +176,60 @@ const FilterImages = (
             >
                 <div className={styles.filter}>
 
-                    <FilterCategory assignedFilters={filters}
-                                    addFilter={addFilter}
-                                    removeFilter={removeFilter}
-                                    filters={filterOptions["popular games"]}
-                                    title={"Popular games"}/>
-                    <FilterCategory assignedFilters={filters}
-                                    addFilter={addFilter}
-                                    removeFilter={removeFilter}
-                                    filters={filterOptions["NSFW categories"]}
-                                    title={"NSFW categories"}/>
-                    <FilterCategory assignedFilters={filters}
-                                    addFilter={addFilter}
-                                    removeFilter={removeFilter}
-                                    filters={filterOptions["nsfw"]}
-                                    title={"nsfw"}/>
-                    <FilterCategory assignedFilters={filters}
-                                    addFilter={addFilter}
-                                    removeFilter={removeFilter}
-                                    filters={filterOptions["Popular anime"]}
-                                    title={"Popular anime"}/>
-                    <FilterCategory assignedFilters={filters}
-                                    addFilter={addFilter}
-                                    removeFilter={removeFilter}
-                                    filters={filterOptions["nsfw part 2"]}
-                                    title={"nsfw part 2"}/>
+                    {
+                        loading && (
+                            <> <FilterLoading/>
+                                <FilterLoading/>
+                                <FilterLoading/>
+                                <FilterLoading/>
+                                <FilterLoading/>
+                            </>
+                        )
+                    }
 
-                    {isChanged &&
-                        <Button onClick={onChange} size={"large"}
-                                aria-label="delete"
-                                color={"info"} style={{
-                            backgroundColor: "limegreen", position: "fixed",
-                            bottom: 0,
-                            left: 0,
-                        }} className={styles.button} disabled={!isChanged}>
-                            <Check/>
-                        </Button>}
+                    <div style={{display: loading ? "none" : "block"}}>
+                        <FilterCategory assignedFilters={filters}
+                                        addFilter={addFilter}
+                                        removeFilter={removeFilter}
+                                        filters={filterOptions["popular games"]}
+                                        title={"Popular games"}/>
+                        <FilterCategory assignedFilters={filters}
+                                        addFilter={addFilter}
+                                        removeFilter={removeFilter}
+                                        filters={filterOptions["NSFW categories"]}
+                                        title={"NSFW categories"}/>
+                        <FilterCategory assignedFilters={filters}
+                                        addFilter={addFilter}
+                                        removeFilter={removeFilter}
+                                        filters={filterOptions["nsfw"]}
+                                        title={"nsfw"}/>
+                        <FilterCategory assignedFilters={filters}
+                                        addFilter={addFilter}
+                                        removeFilter={removeFilter}
+                                        filters={filterOptions["Popular anime"]}
+                                        title={"Popular anime"}/>
+                        <FilterCategory assignedFilters={filters}
+                                        addFilter={addFilter}
+                                        removeFilter={removeFilter}
+                                        filters={filterOptions["nsfw part 2"]}
+                                        title={"nsfw part 2"}/>
+
+                        {isChanged &&
+                            <Button onClick={onChange} size={"large"}
+                                    aria-label="delete"
+                                    color={"info"} style={{
+                                backgroundColor: "limegreen",
+                                position: "fixed",
+                                bottom: 0,
+                                left: 0,
+                            }} className={styles.button}
+                                    disabled={!isChanged}>
+                                <Check/>
+                            </Button>}
 
 
+                    </div>
                 </div>
-
             </Drawer>
         </>
 

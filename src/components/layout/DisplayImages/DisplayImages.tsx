@@ -1,10 +1,11 @@
 import {IFilterOptions, IImageItem} from "@/src/interfaces";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import DImage from "@/components/layout/DisplayImages/ui/DImage/DImage";
 import styles from "./DisplayImages.module.scss";
 import useInput from "@/hooks/useInput";
 import useFetchImages from "@/hooks/useFetchImages";
 import FilterImages from "@/components/layout/filterImages/FilterImages";
+import {CircularProgress, Skeleton} from "@mui/material";
 
 interface IDisplayImagesProps {
     count: number;
@@ -22,7 +23,7 @@ export function DisplayImages({count}: IDisplayImagesProps) {
     const [offsetLevel, setOffsetLevel] = useState<number>(0);
     const [filteredCategories, setFilteredCategories] = useState([]);
 
-    const {data, change} = useFetchImages({
+    const {data, change, loading, error} = useFetchImages({
         _categories: [...filteredCategories],
         _amount: imagesAmount,
         _offset: offsetLevel,
@@ -65,13 +66,24 @@ export function DisplayImages({count}: IDisplayImagesProps) {
 
             <div style={{display: "flex"}}>
                 {data !== null && (
-                    <FilterImages filters={data.filterOptions} change={change}/>
+                    <FilterImages filters={data.filterOptions} change={change}
+                                  loading={loading} error={error}/>
                 )}
                 <div className={styles.imagesGrid}>
 
-                    {currentItems && currentItems.map((item: IImageItem) => (
-                        <DImage key={item.id} item={item} w={300} h={300}/>
-                    ))}
+                    {currentItems !== null ? currentItems.map((item: IImageItem) => (
+                            <DImage key={item.id} item={item} w={300} h={300}/>
+                        ))
+                        :
+                        (
+                            <>
+                               <div>
+                                   <CircularProgress />
+
+                               </div>
+                            </>
+                        )
+                    }
 
                 </div>
             </div>

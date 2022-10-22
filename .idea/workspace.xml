@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/stores/aside.ts" afterDir="false" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="Pre pre pre alfa super mega alfa release">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +112,8 @@
       <workItem from="1666367094550" duration="4493000" />
       <workItem from="1666373242796" duration="4507000" />
       <workItem from="1666385920324" duration="1158000" />
-      <workItem from="1666388932109" duration="3032000" />
+      <workItem from="1666388932109" duration="3353000" />
+      <workItem from="1666439696253" duration="5202000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -148,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666377247205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pre pre pre alfa super mega alfa release">
+      <created>1666392878822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666392878822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +171,7 @@
     <MESSAGE value="[START] - INIT" />
     <MESSAGE value="[FIX] - Cannot set headers after they are sent to the client error" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Pre pre pre alfa super mega alfa release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre pre pre alfa super mega alfa release" />
   </component>
 </project>

@@ -3,6 +3,8 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  width: 100%;
+  margin: 1px;
 
   &:disabled {
     opacity: 0.5;
@@ -10,7 +12,9 @@
 
 }
 
-.filter {
+.filter
+{
+  position: relative;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   padding: 16px;
@@ -48,5 +52,36 @@
       max-width: max-content;
     }
 
+  }
+}
+
+
+
+@keyframes loading {
+  to {
+    opacity: .625;
+  }
+}
+
+
+
+.loadingItem {
+  margin-top: 1.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 80%;
+  min-width: 10vw;
+  background-color: var(--bg-secondary);
+  animation: loading 1s .0s infinite alternate linear;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  span {
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    opacity: 1 !important;
   }
 }
