@@ -6,17 +6,23 @@ import {
     TFilterIdDataType
 } from "@/src/interfaces";
 import {
+    Box,
     Button,
-    Checkbox, CircularProgress,
+    Checkbox,
+    CircularProgress,
+    Collapse,
     Drawer,
     FormControlLabel,
-    FormGroup,
-    Skeleton
+    FormGroup
 } from '@mui/material';
 import {Check} from "@mui/icons-material";
 import styles from "./FilterImages.module.scss";
 import {observer} from "mobx-react-lite";
 import AsideStore from "@/src/stores/aside";
+import {
+    ImagesAmount
+} from "@/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount";
+import {motion} from 'framer-motion';
 
 interface IFilterImagesProps {
     change: ({
@@ -54,22 +60,39 @@ export const FilterCategory = ({
 
     }
 
+    const [opened, setOpened] = useState(false);
+
     return (
         <div className={styles.category}>
-            <div className={styles.category__title}>
+            <div className={styles.category__title}
+                 onClick={() => setOpened(v => !v)}>
                 <span>
                     {title}
                 </span>
             </div>
 
             <FormGroup className={styles.category__group}>
-                {filters.map((_, index) => {
-                        return (<FormControlLabel key={index}
-                                                  control={<Checkbox
-                                                      onChange={toggleFilter(_.id)} defaultChecked={assignedFilters.includes(_.id)}/>}
-                                                  label={_.name}/>)
-                    }
-                )}
+
+                <Box sx={{width: "var(--min-menu-item-width)"}}>
+                    <Collapse in={opened} timeout="auto" unmountOnExit>
+                        {filters.map((_, index) => {
+                                return (<FormControlLabel key={index}
+                                                          control={<Checkbox
+                                                              onChange={toggleFilter(_.id)}
+                                                              defaultChecked={assignedFilters.includes(_.id)}/>}
+                                                          label={_.name}/>)
+                            }
+                        )}
+                    </Collapse>
+                </Box>
+                {/*{filters.map((_, index) => {*/}
+                {/*        return (<FormControlLabel key={index}*/}
+                {/*                                  control={<Checkbox*/}
+                {/*                                      onChange={toggleFilter(_.id)}*/}
+                {/*                                      defaultChecked={assignedFilters.includes(_.id)}/>}*/}
+                {/*                                  label={_.name}/>)*/}
+                {/*    }*/}
+                {/*)}*/}
 
             </FormGroup>
 
@@ -85,7 +108,7 @@ const FilterLoading = () => {
 
         <div className={styles.loadingItem}>
 
-            <CircularProgress />
+            <CircularProgress/>
 
         </div>
         //
@@ -173,12 +196,32 @@ const FilterImages = (
                 anchor={"left"}
                 open={AsideStore.asideVisible}
                 onClose={AsideStore.closeAside}
+                sx={{minHeight: "100vh"}}
             >
+
                 <div className={styles.filter}>
+                    <motion.div animate={{
+                        opacity: isChanged ? 1 : 0.5,
+                        transform: isChanged ? "scale(1)" : "scale(.9)"
+                    }}>
+                        <Button onClick={onChange} size={"large"}
+                                aria-label="delete"
+                                color={"info"} style={{
+                            backgroundColor: "limegreen",
+                        }} className={styles.button}
+                                disabled={!isChanged}>
+                            <Check/>
+                        </Button>
+                    </motion.div>
+
+                    <ImagesAmount disabled={loading} max={100} min={10} step={5}
+                                  currentState={amount}
+                                  onChange={(value) => setAmount(value)}/>
 
                     {
                         loading && (
-                            <> <FilterLoading/>
+                            <>
+                                <FilterLoading/>
                                 <FilterLoading/>
                                 <FilterLoading/>
                                 <FilterLoading/>
@@ -214,23 +257,13 @@ const FilterImages = (
                                         filters={filterOptions["nsfw part 2"]}
                                         title={"nsfw part 2"}/>
 
-                        {isChanged &&
-                            <Button onClick={onChange} size={"large"}
-                                    aria-label="delete"
-                                    color={"info"} style={{
-                                backgroundColor: "limegreen",
-                                position: "fixed",
-                                bottom: 0,
-                                left: 0,
-                            }} className={styles.button}
-                                    disabled={!isChanged}>
-                                <Check/>
-                            </Button>}
-
 
                     </div>
+
                 </div>
+                 <div className={styles.filter__filler}></div>
             </Drawer>
+
         </>
 
     );

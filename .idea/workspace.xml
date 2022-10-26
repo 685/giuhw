@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="Pre pre pre alfa super mega alfa release">
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[REWORK] - Images zoom">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
@@ -28,11 +28,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.rcb.arrow_function_component" />
         <option value="TypeScript JSX File" />
         <option value="package.json" />
         <option value="com.haulmont.rcb.function_component" />
         <option value="TypeScript File" />
+        <option value="com.haulmont.rcb.arrow_function_component" />
       </list>
     </option>
   </component>
@@ -130,7 +130,8 @@
       <workItem from="1666644309698" duration="4000" />
       <workItem from="1666711313399" duration="2516000" />
       <workItem from="1666787791518" duration="2376000" />
-      <workItem from="1666796539325" duration="1155000" />
+      <workItem from="1666796539325" duration="3437000" />
+      <workItem from="1666807881730" duration="5297000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -167,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666392878822</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[REWORK] - Images zoom">
+      <created>1666798036942</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666798036942</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +197,7 @@
     <MESSAGE value="[FIX] - Cannot set headers after they are sent to the client error" />
     <MESSAGE value="." />
     <MESSAGE value="Pre pre pre alfa super mega alfa release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pre pre pre alfa super mega alfa release" />
+    <MESSAGE value="[REWORK] - Images zoom" />
+    <option name="LAST_COMMIT_MESSAGE" value="[REWORK] - Images zoom" />
   </component>
 </project>

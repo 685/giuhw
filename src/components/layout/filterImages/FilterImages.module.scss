@@ -1,10 +1,10 @@
 .button {
 
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  margin: 1px;
+  margin: 0 0 1.5rem 0;
+
+  // add Shadows
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
   &:disabled {
     opacity: 0.5;
@@ -12,12 +12,22 @@
 
 }
 
-.filter
-{
+
+
+.filter {
   position: relative;
   color: var(--text-primary);
   background-color: var(--bg-primary);
-  padding: 16px;
+  padding: 1rem;
+  //height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__filler {
+    flex-grow: 1 !important;
+    background-color: var(--bg-primary);
+  }
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -36,11 +46,13 @@
 
 .category {
   min-width: min-content;
+  max-width: var(--min-menu-item-width);
 
   &__title {
     color: var(--text-primary);
     font-size: 1.5rem;
     text-transform: capitalize;
+    cursor: pointer;
   }
 
   &__group {
@@ -56,13 +68,11 @@
 }
 
 
-
 @keyframes loading {
   to {
     opacity: .625;
   }
 }
-
 
 
 .loadingItem {
@@ -71,8 +81,7 @@
   justify-content: center;
   align-items: center;
   height: 40vh;
-  width: 80%;
-  min-width: 10vw;
+  width: var(--min-menu-item-width);
   background-color: var(--bg-secondary);
   animation: loading 1s .0s infinite alternate linear;
   border: none;
