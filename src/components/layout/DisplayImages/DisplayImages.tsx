@@ -5,14 +5,15 @@ import styles from "./DisplayImages.module.scss";
 import useInput from "@/hooks/useInput";
 import useFetchImages from "@/hooks/useFetchImages";
 import FilterImages from "@/components/layout/filterImages/FilterImages";
-import {CircularProgress, Skeleton} from "@mui/material";
+import {CircularProgress} from "@mui/material";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 interface IDisplayImagesProps {
     count: number;
 }
 
 export function DisplayImages({count}: IDisplayImagesProps) {
-
+   const [animationParent] = useAutoAnimate()
 
     const baseImagesAmount = 30;
 
@@ -34,8 +35,19 @@ export function DisplayImages({count}: IDisplayImagesProps) {
     const [currentFilterOptions, setCurrentFilterOptions] = useState<IFilterOptions | null>(null);
     const [nextPage, setNextPage] = useState<string | null>(null);
     const [prevPage, setPrevPage] = useState<string | null>(null);
+    const [displayLoading, setDisplayLoading] = useState(false);
 
+    useEffect(() => {
 
+        if(loading) {
+            setDisplayLoading(true);
+        } else if (data === null || currentItems === null) {
+            setDisplayLoading(true);
+        } else {
+            setDisplayLoading(false);
+        }
+
+    }, [loading, data, currentItems]);
     useEffect(() => {
 
         if (data) {
@@ -47,6 +59,7 @@ export function DisplayImages({count}: IDisplayImagesProps) {
 
     }, [data]);
 
+    // @ts-ignore
     return (
         <div>
             {/*    <Box sx={{marginBottom: 40}}>*/}
@@ -64,23 +77,31 @@ export function DisplayImages({count}: IDisplayImagesProps) {
 
             {/*</Box>*/}
 
-            <div style={{display: "flex"}}>
+            <div className={styles.dImages} >
                 {data !== null && (
                     <FilterImages filters={data.filterOptions} change={change}
                                   loading={loading} error={error}/>
                 )}
-                <div className={styles.imagesGrid}>
+                <div className={styles.imagesGrid} >
 
-                    {currentItems !== null ? currentItems.map((item: IImageItem) => (
+                    {
+                        !displayLoading && currentItems?.map((item: IImageItem) => (
                             <DImage key={item.id} item={item} w={300} h={300}/>
                         ))
-                        :
-                        (
-                            <>
-                               <div>
-                                   <CircularProgress />
+                    }
 
-                               </div>
+                    {
+                        displayLoading && (
+                            <>
+                                <div style={{
+                                    position: "absolute",
+                                    top: "50%",
+                                    left: "50%",
+                                    transform: "translate(-50%, -50%)"
+                                }}>
+                                    <CircularProgress/>
+
+                                </div>
                             </>
                         )
                     }

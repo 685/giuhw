@@ -1,5 +1,9 @@
-.imagesGrid {
+.dImages {
+  margin: 4vw auto;
+  display: flex;
+}
 
+.imagesGrid {
   // create a gallery where the images are displayed in a grid
   // every row has up to 3 images
 

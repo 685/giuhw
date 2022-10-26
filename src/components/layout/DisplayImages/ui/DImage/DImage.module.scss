@@ -11,63 +11,36 @@ $gradient: linear-gradient(
 .imageContainer {
   position: relative;
 
-  &:not([data-notmodal]) {
-    min-width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  min-height: 300px;
 
-    img, video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 400ms ease-out;
-    }
+  @media screen and (max-width: 500px) {
+    flex: 1 0 20rem;
   }
 
-  &[data-notmodal] {
+  @media screen and (max-width: 355px) {
+    flex: 1 0 16rem;
+  }
+
+  img, video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 4px;
-    cursor: pointer;
-    /* Minimum width of 24rem and grow to fit available space */
-    flex: 1 0 24rem;
-    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-    margin: 1rem;
-    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    min-height: 300px;
+    transition: transform 400ms ease-out;
 
-    img, video {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 400ms ease-out;
-
-      &:hover {
-        transform: scale(1.15);
-      }
-
+    &:hover {
+      transform: scale(1.15);
     }
-
-    .isVideo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: .5rem;
-
-      &__text {
-        pointer-events: none;
-        color: lightblue;
-        font-size: 2rem;
-        font-weight: 700;
-        text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
-
-
-      }
-
-    }
-
   }
 
-  max-width: $modalWidth;
 
   &__info {
     position: absolute;
@@ -77,13 +50,37 @@ $gradient: linear-gradient(
     color: #fff;
     background: $gradient; //rgba(0, 0, 0, 0.5);
     width: 100%;
-    padding: 4px;
+    padding: .40rem .75rem;
     pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+
+
+    & > * {
+      display: block;
+      text-transform: capitalize;
+      font-weight: 500;
+
+    }
 
     &__category {
 
     }
 
+  }
+
+}
+
+.modalImage {
+  position: relative;
+  width: min(100%, 100vw);
+  padding-bottom: 20%;
+  transform: scale(1.7);
+  pointer-events: none;
+  outline: none;
+
+  & > span img {
+    border-radius: 4px;
   }
 
 }
