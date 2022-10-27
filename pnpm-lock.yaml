@@ -12,6 +12,7 @@ specifiers:
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   axios: ^1.1.2
+  clsx: ^1.2.1
   eslint: 8.25.0
   eslint-config-next: 12.3.1
   framer-motion: ^7.6.1
@@ -35,6 +36,7 @@ dependencies:
   '@mui/material': 5.10.9_ikcgkdnp4bn3rgptamntbhbo7e
   '@mui/styles': 5.10.9_iapumuv4e6jcjznwuxpf4tt22e
   axios: 1.1.2
+  clsx: 1.2.1
   framer-motion: 7.6.1_biqbaboplfbrettd7655fr4n2y
   mobx: 6.6.2
   mobx-react-lite: 3.4.0_qrr2ojv4n7h7ey2xj7njerqqr4

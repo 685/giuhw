@@ -23,6 +23,8 @@ import {
     ImagesAmount
 } from "@/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount";
 import {motion} from 'framer-motion';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { clsx } from 'clsx';
 
 interface IFilterImagesProps {
     change: ({
@@ -64,11 +66,20 @@ export const FilterCategory = ({
 
     return (
         <div className={styles.category}>
-            <div className={styles.category__title}
-                 onClick={() => setOpened(v => !v)}>
+            <div className={clsx(styles.category__title, opened && styles.active)}
+                 onClick={() => setOpened(v => !v)}
+            >
                 <span>
                     {title}
                 </span>
+                <motion.span animate={
+                    {
+                        rotate: opened ? 180 : 0,
+
+                    }
+                }>
+                    <KeyboardArrowDownIcon/>
+                </motion.span>
             </div>
 
             <FormGroup className={styles.category__group}>

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[REWORK] - Images zoom">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +132,7 @@
       <workItem from="1666787791518" duration="2376000" />
       <workItem from="1666796539325" duration="3437000" />
       <workItem from="1666807881730" duration="5297000" />
+      <workItem from="1666877633415" duration="3303000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>

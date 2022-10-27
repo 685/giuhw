@@ -71,16 +71,28 @@ $gradient: linear-gradient(
 
 }
 
-.modalImage {
-  position: relative;
-  width: min(100%, 100vw);
-  padding-bottom: 20%;
-  transform: scale(1.7);
-  pointer-events: none;
-  outline: none;
+.dialog {
 
-  & > span img {
-    border-radius: 4px;
+  background-color: var(--bg-secondary) !important;
+
+  & > * {
+    background-color: var(--bg-primary) !important;
+  }
+
+
+  & button {
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    outline: none;
+    font-size: 40px;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: none;
+    cursor: pointer;
   }
 
 }

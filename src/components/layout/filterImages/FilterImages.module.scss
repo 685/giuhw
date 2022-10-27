@@ -13,7 +13,6 @@
 }
 
 
-
 .filter {
   position: relative;
   color: var(--text-primary);
@@ -53,6 +52,26 @@
     font-size: 1.5rem;
     text-transform: capitalize;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    transition: all 0.3s ease-in;
+
+    & > * {
+      display: block;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover, &:focus, &.active{
+      color: var(--text-hover, #aaa);
+    }
+
   }
 
   &__group {

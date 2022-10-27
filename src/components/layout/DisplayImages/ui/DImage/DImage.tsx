@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./DImage.module.scss";
 import {Controlled as ControlledZoom} from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 interface IDImageProps {
     item: IImageItem;
     w: string | number;
@@ -57,13 +57,18 @@ const DImage = ({item, w, h}: IDImageProps) => {
 
     return (<>
             <div className={styles.imageContainer} data-zoomed={isZoomed}>
-                <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange}>
+                <ControlledZoom isZoomed={isZoomed}
+                                onZoomChange={handleZoomChange}
+                                classDialog={styles.dialog}
+                                IconUnzoom={HighlightOffIcon}>
                     {
                         !item.isVideo
                             ?
                             <Image src={item.url} layout={"responsive"}
                                    height={"500px"} width={500}
-                                   alt={`Image ${w} ${h}`}/>
+                                   alt={`Image ${w} ${h}`}
+
+                            />
                             :
                             <video src={item.url} controls={true}></video>
                     }

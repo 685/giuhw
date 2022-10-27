@@ -28,7 +28,7 @@ export const ImagesAmount = ({
 
 
         <div>
-            <span>Pictures per page - {currentState}</span>
+            <span>Max pictures per page - {currentState}</span>
             <Box sx={{minWidth: "var(--min-menu-item-width)"}}>
                 <Slider
                     aria-label="Picture Amount"
