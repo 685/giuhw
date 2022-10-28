@@ -96,7 +96,9 @@ export default async function handler(
                 return;
             }
 
-            for(let item of data.imageList) {
+            data.pageCount = data.pageCount - 1
+
+            for (let item of data.imageList) {
                 item.isVideo = isVideo(item.url);
             }
 

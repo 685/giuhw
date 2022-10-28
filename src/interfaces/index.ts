@@ -41,6 +41,7 @@ export interface IFilterOptions extends T {
 export interface IFetchImagesResponse extends T {
     prevPage: string;
     nextPage: string;
+    pageCount: number;
     imageList: IImageItem[];
     filterOptions: IFilterOptions;
 }

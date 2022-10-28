@@ -24,7 +24,10 @@ import {
 } from "@/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount";
 import {motion} from 'framer-motion';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { clsx } from 'clsx';
+import {clsx} from 'clsx';
+import {
+    Pagination
+} from "@/components/layout/DisplayImages/ui/Pagination/Pagination";
 
 interface IFilterImagesProps {
     change: ({
@@ -32,7 +35,10 @@ interface IFilterImagesProps {
                  _offset,
                  _categories
              }: IUseFetchImagesInitialStateProps) => void;
+    setPage: (page: number) => void;
     filters: IFilterOptions;
+    currentPage: number;
+    maxPage: number;
     loading: boolean;
     error: null | any;
 }
@@ -66,8 +72,9 @@ export const FilterCategory = ({
 
     return (
         <div className={styles.category}>
-            <div className={clsx(styles.category__title, opened && styles.active)}
-                 onClick={() => setOpened(v => !v)}
+            <div
+                className={clsx(styles.category__title, opened && styles.active)}
+                onClick={() => setOpened(v => !v)}
             >
                 <span>
                     {title}
@@ -129,7 +136,7 @@ const FilterLoading = () => {
 }
 
 const FilterImages = (
-    {change, filters: filterOptions, loading, error}: IFilterImagesProps
+    {change, filters: filterOptions, loading, error, setPage, currentPage, maxPage}: IFilterImagesProps
 ) => {
     // Just saves some data, and calls `change` function on submit button click 
 
@@ -151,6 +158,7 @@ const FilterImages = (
         console.log("Removed", [filters])
         return () => setFilters(oldFilters => oldFilters.filter(item => item !== filter))
     }
+
 
     useEffect(() => {
 
@@ -200,6 +208,8 @@ const FilterImages = (
     }
 
 
+
+
     return (
         <>
 
@@ -228,7 +238,7 @@ const FilterImages = (
                     <ImagesAmount disabled={loading} max={100} min={10} step={5}
                                   currentState={amount}
                                   onChange={(value) => setAmount(value)}/>
-
+                    <Pagination maxPage={maxPage} currentPage={currentPage} setPage={setPage}/>
                     {
                         loading && (
                             <>
@@ -272,7 +282,7 @@ const FilterImages = (
                     </div>
 
                 </div>
-                 <div className={styles.filter__filler}></div>
+                <div className={styles.filter__filler}></div>
             </Drawer>
 
         </>

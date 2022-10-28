@@ -8,6 +8,7 @@ import FilterImages from "@/components/layout/filterImages/FilterImages";
 import {CircularProgress} from "@mui/material";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
+
 interface IDisplayImagesProps {
     count: number;
 }
@@ -24,7 +25,7 @@ export function DisplayImages({count}: IDisplayImagesProps) {
     const [offsetLevel, setOffsetLevel] = useState<number>(0);
     const [filteredCategories, setFilteredCategories] = useState([]);
 
-    const {data, change, loading, error} = useFetchImages({
+    const {data, change, loading, error, setPage} = useFetchImages({
         _categories: [...filteredCategories],
         _amount: imagesAmount,
         _offset: offsetLevel,
@@ -59,6 +60,10 @@ export function DisplayImages({count}: IDisplayImagesProps) {
 
     }, [data]);
 
+    const offsetToPage = (off: number) => {
+        return off + 1;
+    }
+
     // @ts-ignore
     return (
         <div>
@@ -80,7 +85,7 @@ export function DisplayImages({count}: IDisplayImagesProps) {
             <div className={styles.dImages} >
                 {data !== null && (
                     <FilterImages filters={data.filterOptions} change={change}
-                                  loading={loading} error={error}/>
+                                  loading={loading} error={error} setPage={setPage} currentPage={offsetToPage(offsetLevel)} maxPage={data.pageCount}/>
                 )}
                 <div className={styles.imagesGrid} >
 
