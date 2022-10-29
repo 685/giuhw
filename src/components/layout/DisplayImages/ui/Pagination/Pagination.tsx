@@ -7,6 +7,7 @@ import KeyboardDoubleArrowLeftIcon
 
 import KeyboardDoubleArrowRightIcon
     from '@mui/icons-material/KeyboardDoubleArrowRight';
+import {useEffect} from "react";
 
 interface PaginationProps {
     offset: number;
@@ -43,6 +44,10 @@ export const Pagination = ({
     function lastPage() {
         setOffset(maxPage - 1);
     }
+
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, [offset]);
 
     return (
         <div className={styles.pagination}>
