@@ -1,5 +1,7 @@
 import Head from "next/head";
-import logo from "@/public/assets/logo.png";
+import icon from "@/public/assets/icon.png";
+import icon32 from "@/public/assets/icon.ico";
+
 
 interface Interface {
 
@@ -16,15 +18,19 @@ export function SEO({title, description, keywords}: Interface) {
 
             <title>{title}</title>
 
+            {/* ico icon */}
+            <link rel="icon" href={icon32.src}/>
+
+
             {/* og meta tags */}
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={description}/>
             <meta property="og:type" content="website"/>
             <meta property="og:locale" content="en_US"/>
-            <meta property="og:site_name" content="Hentai World"/>
+            <meta property="og:site_name" content="HentaiWorld"/>
 
             {/* Image */}
-            <meta property="og:image" content={logo.src}/>
+            <meta property="og:image" content={icon.src}/>
 
 
             {/* twitter meta tags */}

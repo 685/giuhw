@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Filter images styles bug">
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.tsx" afterDir="false" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[ADD] - Scroll to top on offset change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +131,7 @@
       <workItem from="1666897651104" duration="35000" />
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
-      <workItem from="1667035249252" duration="11148000" />
+      <workItem from="1667035249252" duration="11944000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667054717089</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[ADD] - Scroll to top on offset change">
+      <created>1667054823827</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667054823827</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +259,7 @@
     <MESSAGE value="[FIX] - Header styles media" />
     <MESSAGE value="[ADD] - Base SEO optimization" />
     <MESSAGE value="[FIX] - Filter images styles bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Filter images styles bug" />
+    <MESSAGE value="[ADD] - Scroll to top on offset change" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] - Scroll to top on offset change" />
   </component>
 </project>
