@@ -35,10 +35,8 @@ interface IFilterImagesProps {
                  _offset,
                  _categories
              }: IUseFetchImagesInitialStateProps) => void;
-    setPage: (page: number) => void;
     filters: IFilterOptions;
-    currentPage: number;
-    maxPage: number;
+
     loading: boolean;
     error: null | any;
 }
@@ -136,7 +134,7 @@ const FilterLoading = () => {
 }
 
 const FilterImages = (
-    {change, filters: filterOptions, loading, error, setPage, currentPage, maxPage}: IFilterImagesProps
+    {change, filters: filterOptions, loading, error, }: IFilterImagesProps
 ) => {
     // Just saves some data, and calls `change` function on submit button click 
 
@@ -238,7 +236,6 @@ const FilterImages = (
                     <ImagesAmount disabled={loading} max={100} min={10} step={5}
                                   currentState={amount}
                                   onChange={(value) => setAmount(value)}/>
-                    <Pagination maxPage={maxPage} currentPage={currentPage} setPage={setPage}/>
                     {
                         loading && (
                             <>

@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+
+  span {
+    margin: 0 1rem;
+    color: var(--text-secondary)
+  }
+
+}
+
+.button {
+  background-color: var(--discord-btn-color);
+  margin: 0 .2rem;
+  color: #fff;
+  max-width: max-content;
+
+  &[disabled] {
+    background-color: var(--discord-btn-color);
+    color: var(--text-primary);
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+
+  &:hover {
+    background-color: rgb(69, 79, 191);
+  }
+}

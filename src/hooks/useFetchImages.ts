@@ -25,9 +25,8 @@ export default function useFetchImages({
         _categories
     })
 
+
     const [data, setData] = useState<IFetchImagesResponse | null>(null);
-
-
 
     useEffect(() => {
 
@@ -57,10 +56,10 @@ export default function useFetchImages({
         setPayload({_amount, _offset, _categories});
     }
 
-    const setPage = (page: number) => {
+    const setOffset = (offset: number) => {
         let dt: IUseFetchImagesInitialStateProps = {
             _amount: payload._amount,
-            _offset: page,
+            _offset: offset,
             _categories: payload._categories,
         }
         setPayload(
@@ -76,8 +75,8 @@ export default function useFetchImages({
         loading,
         error,
 
+        setOffset,
         change: changeValues,
-        setPage: setPage,
 
 
     }

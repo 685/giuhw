@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/images.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/Pagination/Pagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useFetchImages.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetchImages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +134,9 @@
       <workItem from="1666877633415" duration="4521000" />
       <workItem from="1666889662006" duration="3804000" />
       <workItem from="1666897651104" duration="35000" />
+      <workItem from="1666980075816" duration="2657000" />
+      <workItem from="1667031574898" duration="562000" />
+      <workItem from="1667035249252" duration="5180000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -183,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666881620927</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=".">
+      <created>1666980323447</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666980323447</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
