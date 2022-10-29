@@ -10,7 +10,7 @@ const Images: NextPage = () => {
     return (
         <>
             <SEO
-                title={"Hentai World"}
+                title={"HentaiWorld"}
                 description={"HentaiWorld is a website where you can find the best hentai images and videos."}
                 keywords={"hentai, hentaiworld, hentai images, hentai videos, hentai gifs, hentaiworld images, hentaiworld videos, hentaiworld gifs"}
 
