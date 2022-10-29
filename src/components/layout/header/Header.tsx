@@ -11,7 +11,7 @@ export function Header() {
 
     return (
         <div className={styles.header}>
-            <div>
+            <div className={styles.header__aside}>
 
                 <IconButton onClick={AsideStore.openAside}>
                     <MenuIcon fontSize={"large"} style={{color: "var(--discord-btn-color"}}/>
@@ -21,8 +21,8 @@ export function Header() {
 
             <div className={styles.header__logo}>
                 <Link href={"/"}>
-                    <a>
-                        <Image src={logo} alt={"logo"} height={"58"} width={"450px"}/>
+                    <a href={"/"}>
+                        <Image src={logo} alt={"logo"}/>
                     </a>
                 </Link>
             </div>

@@ -11,6 +11,7 @@ import {
     Checkbox,
     CircularProgress,
     Collapse,
+    Divider,
     Drawer,
     FormControlLabel,
     FormGroup
@@ -25,9 +26,6 @@ import {
 import {motion} from 'framer-motion';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {clsx} from 'clsx';
-import {
-    Pagination
-} from "@/components/layout/DisplayImages/ui/Pagination/Pagination";
 
 interface IFilterImagesProps {
     change: ({
@@ -134,7 +132,7 @@ const FilterLoading = () => {
 }
 
 const FilterImages = (
-    {change, filters: filterOptions, loading, error, }: IFilterImagesProps
+    {change, filters: filterOptions, loading, error,}: IFilterImagesProps
 ) => {
     // Just saves some data, and calls `change` function on submit button click 
 
@@ -206,8 +204,6 @@ const FilterImages = (
     }
 
 
-
-
     return (
         <>
 
@@ -254,21 +250,29 @@ const FilterImages = (
                                         removeFilter={removeFilter}
                                         filters={filterOptions["popular games"]}
                                         title={"Popular games"}/>
+                        <Divider light/>
+
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["NSFW categories"]}
                                         title={"NSFW categories"}/>
+                        <Divider light/>
+
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["nsfw"]}
                                         title={"nsfw"}/>
+                        <Divider light/>
+
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["Popular anime"]}
                                         title={"Popular anime"}/>
+                        <Divider light style={{margin: ".4rem auto"}}/>
+
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
