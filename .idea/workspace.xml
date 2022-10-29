@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Header styles media">
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[ADD] - Base SEO optimization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +130,7 @@
       <workItem from="1666897651104" duration="35000" />
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
-      <workItem from="1667035249252" duration="9831000" />
+      <workItem from="1667035249252" duration="10978000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -211,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667050950660</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[ADD] - Base SEO optimization">
+      <created>1667052718771</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667052718771</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +242,7 @@
     <MESSAGE value="[ADD]  - Pagination" />
     <MESSAGE value="[FIX] - button styles" />
     <MESSAGE value="[FIX] - Header styles media" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Header styles media" />
+    <MESSAGE value="[ADD] - Base SEO optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] - Base SEO optimization" />
   </component>
 </project>
