@@ -3,22 +3,31 @@ import icon from "@/public/assets/icon.png";
 import icon32 from "@/public/assets/icon.ico";
 
 
-interface Interface {
+interface SEOProps {
 
-    title: string;
-    description: string;
-    keywords: string;
+    _title?: string;
+    _description?: string;
+    _keywords?: string;
 
 
 }
 
-export function SEO({title, description, keywords}: Interface) {
+export function SEO({_title, _description, _keywords}: SEOProps) {
+    let title = _title ? _title : "HentaiWorld";
+    let description = _description
+        ? _description
+        : "HentaiWorld is a website where you can find the best hentai" +
+        " images and videos.";
+    let keywords = _keywords
+        ? _keywords
+        : "hentai, hentaiworld, hentai images, hentai videos, hentai gifs," +
+        " hentaiworld images, hentaiworld videos, hentaiworld gifs";
+
     return (
         <Head>
+            {/* Default meta tags */}
 
             <title>{title}</title>
-
-            {/* ico icon */}
             <link rel="icon" href={icon32.src}/>
 
 

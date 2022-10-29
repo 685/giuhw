@@ -20,6 +20,14 @@ $gradient: linear-gradient(
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   min-height: 300px;
 
+  &, & > * {
+    outline: none;
+  }
+
+  &:has(video) {
+    min-height: 0;
+  }
+
   @media screen and (max-width: 500px) {
     flex: 1 0 20rem;
   }
@@ -36,6 +44,9 @@ $gradient: linear-gradient(
     border-radius: 4px;
     transition: transform 400ms ease-out;
 
+  }
+
+  img {
     &:hover {
       transform: scale(1.15);
     }
@@ -43,13 +54,19 @@ $gradient: linear-gradient(
 
 
   &__info {
+    &__video {
+      top: 0;
+      height: max-content;
+      border-radius: 4px;
+    }
+
     position: absolute;
     bottom: 0;
     left: 0;
     font-size: 1rem;
     color: #fff;
     background: $gradient; //rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 100.3%;
     padding: .40rem .75rem;
     pointer-events: none;
     display: flex;

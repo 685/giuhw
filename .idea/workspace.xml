@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[ADD] - Scroll to top on offset change">
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Spelling">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +136,7 @@
       <workItem from="1666897651104" duration="35000" />
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
-      <workItem from="1667035249252" duration="11944000" />
+      <workItem from="1667035249252" duration="15744000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -231,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667054823827</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[FIX] - some seo fixes">
+      <created>1667060746015</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1667060746015</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[FIX] - Spelling">
+      <created>1667060931732</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667060931732</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +279,8 @@
     <MESSAGE value="[ADD] - Base SEO optimization" />
     <MESSAGE value="[FIX] - Filter images styles bug" />
     <MESSAGE value="[ADD] - Scroll to top on offset change" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] - Scroll to top on offset change" />
+    <MESSAGE value="[FIX] - some seo fixes" />
+    <MESSAGE value="[FIX] - Spelling" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Spelling" />
   </component>
 </project>

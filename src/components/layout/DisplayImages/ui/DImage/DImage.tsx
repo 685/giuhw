@@ -5,6 +5,8 @@ import styles from "./DImage.module.scss";
 import {Controlled as ControlledZoom} from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import clsx from "clsx";
+
 interface IDImageProps {
     item: IImageItem;
     w: string | number;
@@ -63,18 +65,25 @@ const DImage = ({item, w, h}: IDImageProps) => {
                                 IconUnzoom={HighlightOffIcon}>
                     {
                         !item.isVideo
-                            ?
-                            <Image src={item.url} layout={"responsive"}
-                                   height={"500px"} width={500}
-                                   alt={`Image ${w} ${h}`}
+                        &&
+                        <Image src={item.url} layout={"responsive"}
+                               height={"500px"} width={500}
+                               alt={`Image ${w} ${h}`}
 
-                            />
-                            :
-                            <video src={item.url} controls={true}></video>
+                        />
+
                     }
                 </ControlledZoom>
 
-                <div className={styles.imageContainer__info}>
+                {
+                    item.isVideo && (
+                        <>
+                            <video src={item.url} controls={true}></video>
+                        </>
+                    )
+                }
+
+                <div className={clsx(styles.imageContainer__info, item.isVideo && styles.imageContainer__info__video)}>
 
                     <div>
                         {item.channel}

@@ -1,21 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {IUseFetchImagesInitialStateProps} from "@/hooks/useFetchImages";
-import {
-    IFilterOption,
-    IFilterOptions,
-    TFilterIdDataType
-} from "@/src/interfaces";
-import {
-    Box,
-    Button,
-    Checkbox,
-    CircularProgress,
-    Collapse,
-    Divider,
-    Drawer,
-    FormControlLabel,
-    FormGroup
-} from '@mui/material';
+import {IFilterOptions, TFilterIdDataType} from "@/src/interfaces";
+import {Button, CircularProgress, Divider, Drawer} from '@mui/material';
 import {Check} from "@mui/icons-material";
 import styles from "./FilterImages.module.scss";
 import {observer} from "mobx-react-lite";
@@ -24,8 +10,9 @@ import {
     ImagesAmount
 } from "@/components/layout/DisplayImages/ui/ImagesAmount/ImagesAmount";
 import {motion} from 'framer-motion';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import {clsx} from 'clsx';
+import {
+    FilterCategory
+} from "@/components/layout/filterImages/ui/FilterCategory/FilterCategory";
 
 interface IFilterImagesProps {
     change: ({
@@ -39,82 +26,6 @@ interface IFilterImagesProps {
     error: null | any;
 }
 
-type IFilterActionFunctionType = (filter: TFilterIdDataType) => () => void;
-
-interface IFilterCategoryProps {
-    filters: IFilterOption[];
-    title: string;
-    assignedFilters: TFilterIdDataType[];
-    addFilter: IFilterActionFunctionType;
-    removeFilter: IFilterActionFunctionType;
-}
-
-export const FilterCategory = ({
-                                   title,
-                                   filters,
-                                   assignedFilters,
-                                   addFilter,
-                                   removeFilter,
-                               }: IFilterCategoryProps) => {
-
-    const toggleFilter = (filter: TFilterIdDataType): () => void => {
-
-        const isAssigned = assignedFilters.includes(filter);
-        return isAssigned ? removeFilter(filter) : addFilter(filter)
-
-    }
-
-    const [opened, setOpened] = useState(false);
-
-    return (
-        <div className={styles.category}>
-            <div
-                className={clsx(styles.category__title, opened && styles.active)}
-                onClick={() => setOpened(v => !v)}
-            >
-                <span>
-                    {title}
-                </span>
-                <motion.span animate={
-                    {
-                        rotate: opened ? 180 : 0,
-
-                    }
-                }>
-                    <KeyboardArrowDownIcon/>
-                </motion.span>
-            </div>
-
-            <FormGroup className={styles.category__group}>
-
-                <Box sx={{width: "var(--min-menu-item-width)"}}>
-                    <Collapse in={opened} timeout="auto" unmountOnExit>
-                        {filters.map((_, index) => {
-                                return (<FormControlLabel key={index}
-                                                          control={<Checkbox
-                                                              onChange={toggleFilter(_.id)}
-                                                              defaultChecked={assignedFilters.includes(_.id)}/>}
-                                                          label={_.name}/>)
-                            }
-                        )}
-                    </Collapse>
-                </Box>
-                {/*{filters.map((_, index) => {*/}
-                {/*        return (<FormControlLabel key={index}*/}
-                {/*                                  control={<Checkbox*/}
-                {/*                                      onChange={toggleFilter(_.id)}*/}
-                {/*                                      defaultChecked={assignedFilters.includes(_.id)}/>}*/}
-                {/*                                  label={_.name}/>)*/}
-                {/*    }*/}
-                {/*)}*/}
-
-            </FormGroup>
-
-
-        </div>
-    )
-
-}
 
 const FilterLoading = () => {
 
@@ -143,7 +54,7 @@ const FilterImages = (
     const [isChanged, setIsChanged] = useState<boolean>(false);
 
     const [amount, setAmount] = useState<number>(baseAmount);
-    const [offset, setOffset] = useState<number>(0);
+    const [offset] = useState<number>(0);
     const [filters, setFilters] = useState<TFilterIdDataType[]>([]);
 
     const addFilter = (filter: TFilterIdDataType) => {
@@ -158,7 +69,8 @@ const FilterImages = (
 
     useEffect(() => {
 
-        // @ToDo: Sort filters
+        setFilters(current => Array.from(new Set(current)))
+
 
     }, [filters]);
 
@@ -245,26 +157,28 @@ const FilterImages = (
                     }
 
                     <div style={{display: loading ? "none" : "block"}}>
+                        <Divider light style={{marginBottom: ".4rem"}}/>
+
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["popular games"]}
                                         title={"Popular games"}/>
-                        <Divider light/>
+                        <Divider light style={{margin: ".4rem auto"}}/>
 
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["NSFW categories"]}
                                         title={"NSFW categories"}/>
-                        <Divider light/>
+                        <Divider light style={{margin: ".4rem auto"}}/>
 
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
                                         removeFilter={removeFilter}
                                         filters={filterOptions["nsfw"]}
                                         title={"nsfw"}/>
-                        <Divider light/>
+                        <Divider light style={{margin: ".4rem auto"}}/>
 
                         <FilterCategory assignedFilters={filters}
                                         addFilter={addFilter}
