@@ -12,19 +12,19 @@
 }
 
 .button {
-  background-color: var(--discord-btn-color);
-  margin: 0 .2rem;
-  color: #fff;
-  max-width: max-content;
+  background-color: var(--discord-btn-color) !important;
+  margin: 0 .2rem !important;
+  color: #fff !important;
+  max-width: max-content !important;
 
   &[disabled] {
-    background-color: var(--discord-btn-color);
-    color: var(--text-primary);
-    opacity: 0.5;
+    background-color: var(--discord-btn-color) !important;
+    color: var(--text-primary) !important;
+    opacity: 0.5 !important;
     cursor: not-allowed !important;
   }
 
   &:hover {
-    background-color: rgb(69, 79, 191);
+    background-color: rgb(69, 79, 191) !important;
   }
 }
