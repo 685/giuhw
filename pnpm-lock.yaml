@@ -22,6 +22,7 @@ specifiers:
   next-image-zoom: ^1.1.7
   react: 18.2.0
   react-dom: 18.2.0
+  react-icons: ^4.6.0
   react-medium-image-zoom: ^5.1.1
   react-modal-image: ^2.6.0
   sass: ^1.55.0
@@ -44,6 +45,7 @@ dependencies:
   next-image-zoom: 1.1.7_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.6.0_react@18.2.0
   react-medium-image-zoom: 5.1.1_biqbaboplfbrettd7655fr4n2y
   react-modal-image: 2.6.0
   sass: 1.55.0
@@ -2663,6 +2665,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.6.0_react@18.2.0:
+    resolution: {integrity: sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

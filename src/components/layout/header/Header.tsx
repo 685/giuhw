@@ -1,10 +1,12 @@
-import {Button, IconButton} from "@mui/material";
+import {IconButton} from "@mui/material";
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import logo from "@/public/assets/logo.png";
 import Image from "next/image";
 import MenuIcon from '@mui/icons-material/Menu';
 import AsideStore from "@/src/stores/aside"
+import {BsDiscord} from "react-icons/all";
+
 
 export function Header() {
     const inviteLink = "https://discord.gg/EnycHFGhaY";
@@ -14,7 +16,8 @@ export function Header() {
             <div className={styles.header__aside}>
 
                 <IconButton onClick={AsideStore.openAside}>
-                    <MenuIcon fontSize={"large"} style={{color: "var(--discord-btn-color"}}/>
+                    <MenuIcon fontSize={"large"}
+                              style={{color: "var(--discord-btn-color"}}/>
                 </IconButton>
 
             </div>
@@ -28,14 +31,16 @@ export function Header() {
             </div>
 
             <div className={styles.buttonWrapper}>
-                <Button className={styles.button}>
-                    <Link href={inviteLink} rel={"noreferrer"}>
-                        <a href={inviteLink} rel={"noreferrer"}
-                           target={"_blank"}>
-                            Join our Discord
-                        </a>
-                    </Link>
-                </Button>
+                <Link href={inviteLink} rel={"noreferrer"}>
+                    <a href={inviteLink} rel={"noreferrer"}
+                       target={"_blank"}>
+                        <IconButton className={styles.button}>
+
+                            <BsDiscord/>
+                        </IconButton>
+                    </a>
+                </Link>
+
             </div>
 
         </div>

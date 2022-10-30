@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" afterDir="false" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +136,7 @@
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
       <workItem from="1667035249252" duration="16185000" />
-      <workItem from="1667147712595" duration="2882000" />
+      <workItem from="1667147712595" duration="4385000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -258,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667067047697</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component">
+      <created>1667150705960</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667150705960</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +296,7 @@
     <MESSAGE value="[FIX] - some seo fixes" />
     <MESSAGE value="[FIX] - Spelling" />
     <MESSAGE value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
+    <MESSAGE value="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component" />
   </component>
 </project>

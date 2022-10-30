@@ -11,9 +11,7 @@ function App({Component, pageProps}: AppProps) {
             <div className={"app"}>
                 <Header/>
                 <div className={"container"}>
-                    <Ad/>
                     <Component {...pageProps} />
-                    <Ad/>
                 </div>
 
             </div>

@@ -10,11 +10,14 @@ export function Ad({children, width}: AdProps) {
     return (
         <div className={styles.ad} style={{width}}>
 
-            <span className={styles.ad__text}>
-                {
-                    children ? children : "Ad"
-                }
+            {
+                children
+                    ?
+                    children
+                    : <span className={styles.ad__text}>
+                    Ad
             </span>
+            }
 
         </div>
     )
