@@ -31,11 +31,7 @@ export enum EFilterOptions  {
 }
 
 export interface IFilterOptions extends T {
-    "NSFW categories": IFilterOption[];
-    "Popular anime": IFilterOption[];
-    nsfw: IFilterOption[];
-    "nsfw part 2": IFilterOption[];
-    "popular games": IFilterOption[];
+    [key: string]: IFilterOption[];
 }
 
 export interface IFetchImagesResponse extends T {

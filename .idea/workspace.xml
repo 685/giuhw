@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Spelling">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" afterDir="false" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/ui/DImage/DImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/SEO/SEO.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +29,9 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="package.json" />
-        <option value="com.haulmont.rcb.function_component" />
         <option value="TypeScript File" />
         <option value="com.haulmont.rcb.arrow_function_component" />
+        <option value="com.haulmont.rcb.function_component" />
       </list>
     </option>
   </component>
@@ -136,7 +136,8 @@
       <workItem from="1666897651104" duration="35000" />
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
-      <workItem from="1667035249252" duration="15744000" />
+      <workItem from="1667035249252" duration="16185000" />
+      <workItem from="1667147712595" duration="2882000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -250,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667060931732</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying">
+      <created>1667067047697</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667067047697</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +289,7 @@
     <MESSAGE value="[ADD] - Scroll to top on offset change" />
     <MESSAGE value="[FIX] - some seo fixes" />
     <MESSAGE value="[FIX] - Spelling" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Spelling" />
+    <MESSAGE value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
   </component>
 </project>

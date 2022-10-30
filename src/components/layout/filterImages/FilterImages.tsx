@@ -89,8 +89,6 @@ const FilterImages = (
             if (!equals(previousData._categories, filters)) {
                 isChanged = true;
             }
-            console.log("Equals", equals(previousData?._categories, filters))
-            console.log("!Equals", !equals(previousData?._categories, filters))
         } else {
             setPreviousData({
                     _amount: amount,
@@ -100,7 +98,6 @@ const FilterImages = (
             )
         }
 
-        console.log("Prev data", previousData)
 
         setIsChanged(isChanged);
 
@@ -157,41 +154,50 @@ const FilterImages = (
                     }
 
                     <div style={{display: loading ? "none" : "block"}}>
-                        <Divider light style={{marginBottom: ".4rem"}}/>
 
-                        <FilterCategory assignedFilters={filters}
-                                        addFilter={addFilter}
-                                        removeFilter={removeFilter}
-                                        filters={filterOptions["popular games"]}
-                                        title={"Popular games"}/>
-                        <Divider light style={{margin: ".4rem auto"}}/>
+                        {
+                            Object.keys(filterOptions).map((key, index) => (
+                                <>
+                                    <Divider light
+                                             style={{marginBottom: ".4rem"}}/>
 
-                        <FilterCategory assignedFilters={filters}
-                                        addFilter={addFilter}
-                                        removeFilter={removeFilter}
-                                        filters={filterOptions["NSFW categories"]}
-                                        title={"NSFW categories"}/>
-                        <Divider light style={{margin: ".4rem auto"}}/>
+                                    <FilterCategory assignedFilters={filters}
+                                                    addFilter={addFilter}
+                                                    removeFilter={removeFilter}
+                                                    filters={filterOptions[`${key}`]}
+                                                    title={`${key}`}/>
+                                </>
+                            ))
+                        }
 
-                        <FilterCategory assignedFilters={filters}
-                                        addFilter={addFilter}
-                                        removeFilter={removeFilter}
-                                        filters={filterOptions["nsfw"]}
-                                        title={"nsfw"}/>
-                        <Divider light style={{margin: ".4rem auto"}}/>
+                        {/*<Divider light style={{margin: ".4rem auto"}}/>*/}
 
-                        <FilterCategory assignedFilters={filters}
-                                        addFilter={addFilter}
-                                        removeFilter={removeFilter}
-                                        filters={filterOptions["Popular anime"]}
-                                        title={"Popular anime"}/>
-                        <Divider light style={{margin: ".4rem auto"}}/>
+                        {/*<FilterCategory assignedFilters={filters}*/}
+                        {/*                addFilter={addFilter}*/}
+                        {/*                removeFilter={removeFilter}*/}
+                        {/*                filters={filterOptions["NSFW categories"]}*/}
+                        {/*                title={"NSFW categories"}/>*/}
+                        {/*<Divider light style={{margin: ".4rem auto"}}/>*/}
 
-                        <FilterCategory assignedFilters={filters}
-                                        addFilter={addFilter}
-                                        removeFilter={removeFilter}
-                                        filters={filterOptions["nsfw part 2"]}
-                                        title={"nsfw part 2"}/>
+                        {/*<FilterCategory assignedFilters={filters}*/}
+                        {/*                addFilter={addFilter}*/}
+                        {/*                removeFilter={removeFilter}*/}
+                        {/*                filters={filterOptions["nsfw"]}*/}
+                        {/*                title={"nsfw"}/>*/}
+                        {/*<Divider light style={{margin: ".4rem auto"}}/>*/}
+
+                        {/*<FilterCategory assignedFilters={filters}*/}
+                        {/*                addFilter={addFilter}*/}
+                        {/*                removeFilter={removeFilter}*/}
+                        {/*                filters={filterOptions["Popular anime"]}*/}
+                        {/*                title={"Popular anime"}/>*/}
+                        {/*<Divider light style={{margin: ".4rem auto"}}/>*/}
+
+                        {/*<FilterCategory assignedFilters={filters}*/}
+                        {/*                addFilter={addFilter}*/}
+                        {/*                removeFilter={removeFilter}*/}
+                        {/*                filters={filterOptions["nsfw part 2"]}*/}
+                        {/*                title={"nsfw part 2"}/>*/}
 
 
                     </div>
