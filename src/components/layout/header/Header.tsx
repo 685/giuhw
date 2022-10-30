@@ -5,7 +5,7 @@ import logo from "@/public/assets/logo.png";
 import Image from "next/image";
 import MenuIcon from '@mui/icons-material/Menu';
 import AsideStore from "@/src/stores/aside"
-import {BsDiscord} from "react-icons/all";
+import {BsDiscord} from "react-icons/bs";
 
 
 export function Header() {

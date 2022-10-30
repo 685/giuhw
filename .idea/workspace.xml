@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Ad/Ad.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +128,7 @@
       <workItem from="1666980075816" duration="2657000" />
       <workItem from="1667031574898" duration="562000" />
       <workItem from="1667035249252" duration="16185000" />
-      <workItem from="1667147712595" duration="4385000" />
+      <workItem from="1667147712595" duration="4689000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -264,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667150705960</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary=".">
+      <created>1667152215431</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667152215431</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +285,6 @@
     <MESSAGE value="[FIX] - Cannot set headers after they are sent to the client error" />
     <MESSAGE value="Pre pre pre alfa super mega alfa release" />
     <MESSAGE value="[REWORK] - Images zoom" />
-    <MESSAGE value="." />
     <MESSAGE value="[ADD]  - Pagination" />
     <MESSAGE value="[FIX] - button styles" />
     <MESSAGE value="[FIX] - Header styles media" />
@@ -297,6 +295,7 @@
     <MESSAGE value="[FIX] - Spelling" />
     <MESSAGE value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
     <MESSAGE value="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
