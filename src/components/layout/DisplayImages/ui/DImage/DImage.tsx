@@ -69,6 +69,7 @@ const DImage = ({item, w, h}: IDImageProps) => {
                         <Image src={item.url} layout={"responsive"}
                                height={"500px"} width={500}
                                alt={`Image ${w} ${h}`}
+                               priority={true}
 
                         />
 

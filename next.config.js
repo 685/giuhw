@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+    reactStrictMode: true,
+    swcMinify: true,
 
-  images: {
-    domains: ['cdn.discordapp.com']
-  }
+    images: {
+        domains: ['cdn.discordapp.com']
+    },
+    i18n: {
+        locales: ["en"],
+        defaultLocale: "en"
+    }
 
 }
 

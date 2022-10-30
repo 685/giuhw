@@ -12,8 +12,8 @@ const StyledTooltip = styled(({
     </Tooltip>
 ))`
   & .MuiTooltip-tooltip {
-    background: var(--tooltip-background);
-    color: var(--tooltip-color);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
     font-size: .9rem;
     padding: 8px 12px;
   }
