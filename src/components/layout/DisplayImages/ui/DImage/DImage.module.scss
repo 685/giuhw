@@ -9,6 +9,7 @@ $gradient: linear-gradient(
 );
 
 .imageContainer {
+
   position: relative;
 
   border-radius: 4px;
@@ -43,6 +44,7 @@ $gradient: linear-gradient(
     object-fit: cover;
     border-radius: 4px;
     transition: transform 400ms ease-out;
+
 
   }
 

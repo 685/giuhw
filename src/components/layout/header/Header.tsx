@@ -27,7 +27,7 @@ export function Header() {
             <div className={styles.header__logo}>
                 <Link href={"/"}>
                     <a href={"/"}>
-                        <Image src={logo} alt={"logo"}/>
+                        <Image src={logo} alt={"logo"} priority={true}/>
                     </a>
                 </Link>
             </div>
@@ -42,7 +42,7 @@ export function Header() {
                             <IconButton className={styles.button}>
 
                                 <svg stroke="currentColor" fill="currentColor"
-                                     stroke-width="0" viewBox="0 0 16 16"
+                                     strokeWidth="0" viewBox="0 0 16 16"
                                      height="1em" width="1em"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path

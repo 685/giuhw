@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import useFetch from "@/hooks/useFetch";
 import {IFetchImagesResponse, TFilterIdDataType} from "@/src/interfaces";
 
@@ -8,14 +8,20 @@ export interface IUseFetchImagesInitialStateProps {
     _offset: number;
     _categories: TFilterIdDataType[];
 
-
 }
+
+interface IUseFetchImagesProps extends IUseFetchImagesInitialStateProps {
+    preloadedData: IFetchImagesResponse;
+}
+
+
 
 export default function useFetchImages({
                                            _amount,
                                            _offset,
-                                           _categories
-                                       }: IUseFetchImagesInitialStateProps) {
+                                           _categories,
+    preloadedData,
+                                       }: IUseFetchImagesProps) {
 
     const {request, error, loading} = useFetch();
 
@@ -25,27 +31,21 @@ export default function useFetchImages({
         _categories
     })
 
-
-    const [data, setData] = useState<IFetchImagesResponse | null>(null);
-
-    useEffect(() => {
-
-        const fetchData = async () => {
-            const response = await request("/api/images", "POST", {
-                amount: payload._amount,
-                offset: payload._offset,
-                categories: payload._categories
-            })
-
-            setData(response);
-
-        }
-
-        fetchData()
-            .catch(console.error);
+    const [data, setData] = useState<IFetchImagesResponse | null>(preloadedData);
 
 
-    }, [request, payload])
+
+
+    const fetchData = async ({_amount, _offset, _categories}: IUseFetchImagesInitialStateProps) => {
+        const response = await request("/api/images", "POST", {
+            amount: _amount,
+            offset: _offset,
+            categories: _categories
+        })
+
+        setData(response);
+
+    }
 
 
     const changeValues = ({
@@ -54,6 +54,8 @@ export default function useFetchImages({
                               _categories
                           }: IUseFetchImagesInitialStateProps) => {
         setPayload({_amount, _offset, _categories});
+        fetchData({_amount, _offset, _categories})
+            .catch(console.error);
     }
 
     const setOffset = (offset: number) => {
@@ -65,6 +67,8 @@ export default function useFetchImages({
         setPayload(
             dt
         )
+        fetchData(dt)
+            .catch(console.error);
 
     }
 

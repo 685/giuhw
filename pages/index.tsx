@@ -1,35 +1,48 @@
 import {
     DisplayImages
 } from '@/src/components/layout/DisplayImages/DisplayImages';
-import type {NextPage} from 'next'
+import type {GetServerSideProps, NextPage} from 'next'
 import axios from "axios";
 import {IFetchImagesResponse} from "@/src/interfaces";
+import {getFullUrl} from "@/src/utils";
 
 interface ImagesProps {
     preloadedData: IFetchImagesResponse;
     error: boolean;
 }
 
-// preloading from the server
-export const getServerSideProps = async () => {
+type Data = {
+    preloadedData: IFetchImagesResponse;
+    error: boolean;
+}
 
-    let basePayload = {}
+// preloading from the server
+export const getServerSideProps: GetServerSideProps<Data> = async ({req}) => {
+
+    let basePayload = {
+        categories: [],
+        amount: 30,
+        offset: 0,
+    }
 
     let error = false
 
-    const response = await axios.get("/api/images", {
-        headers: {},
-        data: basePayload
+
+    const response = await axios.post(getFullUrl(req).fullUrl + "api/images", {
+        ...basePayload
     })
 
     if (!response.status.toString().startsWith('2')) {
         error = true;
     }
 
+    let preloadedData: IFetchImagesResponse = response.data;
+
+
 
     return {
         props: {
-            preloadedData: response.data,
+            preloadedData: preloadedData,
             error: error,
         }
     }

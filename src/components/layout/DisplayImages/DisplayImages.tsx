@@ -13,7 +13,7 @@ interface IDisplayImagesProps {
     preloadedData: IFetchImagesResponse;
 }
 
-export function DisplayImages({}: IDisplayImagesProps) {
+export function DisplayImages({preloadedData}: IDisplayImagesProps) {
 
     const baseImagesAmount = 30;
 
@@ -22,6 +22,7 @@ export function DisplayImages({}: IDisplayImagesProps) {
         _categories: [],
         _amount: baseImagesAmount,
         _offset: 0,
+        preloadedData: preloadedData,
     });
 
 
