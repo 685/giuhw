@@ -1,4 +1,4 @@
-import {IImageItem} from "@/src/interfaces";
+import {IFetchImagesResponse, IImageItem} from "@/src/interfaces";
 import React, {useEffect, useState} from "react";
 import DImage from "@/components/layout/DisplayImages/ui/DImage/DImage";
 import styles from "./DisplayImages.module.scss";
@@ -10,7 +10,7 @@ import {Pagination} from "./ui/Pagination/Pagination";
 
 
 interface IDisplayImagesProps {
-
+    preloadedData: IFetchImagesResponse;
 }
 
 export function DisplayImages({}: IDisplayImagesProps) {
