@@ -32,6 +32,8 @@ export const getServerSideProps: GetServerSideProps<Data> = async ({req}) => {
         ...basePayload
     })
 
+    console.log("Response", response)
+
     if (!response.status.toString().startsWith('2')) {
         error = true;
     }
@@ -53,10 +55,16 @@ const Images: NextPage<ImagesProps> = ({preloadedData, error}: ImagesProps) => {
 
     return (
         <>
-            <DisplayImages preloadedData={preloadedData}/>
+            {
+                error ? (
+                    <div>Something went wrong</div>
+                ) : (
+                    <DisplayImages preloadedData={preloadedData}/>
+                )
+            }
         </>
     )
-
 }
+
 
 export default Images;
