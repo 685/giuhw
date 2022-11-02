@@ -20,7 +20,7 @@
 
   // If this ad element is the pre last child of the parent element
   &:nth-last-child(2) {
-    margin-top: 2rem;
+    margin-top: 2rem !important;
   }
 
 
