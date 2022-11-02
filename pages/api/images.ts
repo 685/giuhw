@@ -75,7 +75,7 @@ export default async function handler(
 
     if (req.method === 'POST') {
         const body = req.body
-        console.log(body)
+      
         const validatedBody = validateData(body);
 
         if (validatedBody === false) {

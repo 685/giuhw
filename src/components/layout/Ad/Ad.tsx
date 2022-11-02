@@ -1,5 +1,6 @@
 import styles from "./Ad.module.scss";
 import React from "react";
+import clsx from "clsx";
 
 interface AdProps {
     children?: React.ReactNode;
@@ -8,14 +9,14 @@ interface AdProps {
 
 export function Ad({children, width}: AdProps) {
     return (
-        <div className={styles.ad} style={{width}}>
+        <div className={clsx(styles.ad, "advertisement")} style={{width}}>
 
             {
                 children
                     ?
                     children
                     : <span className={styles.ad__text}>
-                    Ad
+                    That is an advertisement
             </span>
             }
 

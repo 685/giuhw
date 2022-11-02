@@ -21,16 +21,26 @@ a {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+
+  &:not(:has(div.advertisement)) {
+    padding-top: 18vh;
+  }
+
+
+
+
 }
 
 
 .container {
   max-width: 70vw;
-    margin: calc(4vw + 100px) auto;
+  margin: 2rem auto;
 
 
   @media screen and (max-width: 700px) {
     max-width: 90vw;
+    margin-top: 0;
+    max-height: max-content;
   }
 }
 
@@ -41,7 +51,7 @@ a {
   --bg-secondary: rgb(20, 20, 24);
   --text-primary: rgb(255, 255, 255, 0.9);
   --text-secondary: rgb(255, 255, 255, 0.8);
-  --text-hover : rgb(255, 255, 255, 0.6);
+  --text-hover: rgb(255, 255, 255, 0.6);
 
   --discord-btn-color: rgb(88, 101, 242);
 

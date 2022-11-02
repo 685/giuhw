@@ -2,12 +2,27 @@
 
   height: 15vh;
   background-color: var(--bg-secondary);
-  margin: 1rem auto;
+  margin: 15vh auto 2rem auto;
   border-radius: 4px;
 
 
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 70vw;
+
+  @media screen and (max-width: 700px) {
+    max-width: 90vw;
+    margin-top: 32vh;
+  }
+
+
+  // If this ad element is the pre last child of the parent element
+  &:nth-last-child(2) {
+    margin-top: 2rem;
+  }
+
 
   &__text {
     color: var(--text-primary);

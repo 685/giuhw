@@ -12,7 +12,7 @@ export function Header() {
     const inviteLink = "https://discord.gg/EnycHFGhaY";
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.header__aside}>
 
                 <Tooltip title={"Open menu"}>
@@ -57,6 +57,6 @@ export function Header() {
                 </Link>
             </div>
 
-        </div>
+        </header>
     )
 }
