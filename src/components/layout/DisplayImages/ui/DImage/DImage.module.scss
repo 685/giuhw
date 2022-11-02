@@ -9,6 +9,7 @@ $gradient: linear-gradient(
 );
 
 .imageContainer {
+
   position: relative;
 
   border-radius: 4px;
@@ -38,8 +39,10 @@ $gradient: linear-gradient(
 
   &__notAnAdult {
     img, video {
-      filter: blur(40px);
+      filter: blur(4rem);
     }
+
+    opacity: 0.5;
   }
 
   img, video {
@@ -49,6 +52,7 @@ $gradient: linear-gradient(
     object-fit: cover;
     border-radius: 4px;
     transition: transform 400ms ease-out;
+
 
   }
 

@@ -22,9 +22,9 @@ const Images: NextPage = () => {
                       onClose={() => setUserAdult(true)}>
                 <Alert onClose={() => {
                     setUserAdult(true)
-                }} severity="info"
+                }} severity="warning"
                        sx={{width: '100%'}}>
-                    This website contains adult content. By clicking <b>X</b> you confirm that you are 18 years of age or older.
+                    This website contains <b>adult</b> content. By using this website, you represent that you are <b>18 years of age or older</b>.
                 </Alert>
             </Snackbar>
         </>

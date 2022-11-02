@@ -27,7 +27,7 @@ export function Header() {
             <div className={styles.header__logo}>
                 <Link href={"/"}>
                     <a href={"/"}>
-                        <Image src={logo} alt={"logo"}/>
+                        <Image src={logo} alt={"logo"} priority={true}/>
                     </a>
                 </Link>
             </div>

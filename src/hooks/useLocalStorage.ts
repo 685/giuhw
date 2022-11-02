@@ -17,14 +17,25 @@ const useLocalStorage = ({key, initialValue}: UseLocalStorageProps) => {
             const item = window.localStorage.getItem(key);
             return item ? JSON.parse(item) : initialValue
         })
-    }, [])
+    }, [key, initialValue])
 
     useEffect(() => {
         if (isMounted) {
             window.localStorage.setItem(key, JSON.stringify(value))
         }
 
-    }, [key, value])
+    }, [key, value, isMounted])
+
+
+    let check = setInterval(
+        () => {
+            setValue(() => {
+                const item = window.localStorage.getItem(key);
+                return item ? JSON.parse(item) : initialValue
+            })
+        }
+        , 10000
+    )
 
     return {value, setValue};
 

@@ -6,10 +6,11 @@ import {Controlled as ControlledZoom} from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import clsx from "clsx";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 interface IDImageProps {
     item: IImageItem;
-    userAdult: boolean;
+userAdult: boolean
 }
 
 
@@ -17,15 +18,14 @@ const DImage = ({item, userAdult}: IDImageProps) => {
 
     const [isZoomed, setIsZoomed] = useState(false)
 
+
     const handleZoomChange = useCallback((shouldZoom: boolean | ((prevState: boolean) => boolean)) => {
         setIsZoomed(userAdult ? shouldZoom : false)
     }, [userAdult])
 
 
     return (<>
-            <div
-                className={clsx(styles.imageContainer, !userAdult && styles.imageContainer__notAnAdult)}
-                data-zoomed={isZoomed}>
+            <div className={clsx(styles.imageContainer, !userAdult && styles.imageContainer__notAnAdult)} data-zoomed={isZoomed}>
                 <ControlledZoom isZoomed={isZoomed}
                                 onZoomChange={handleZoomChange}
                                 classDialog={styles.dialog}
@@ -51,8 +51,7 @@ const DImage = ({item, userAdult}: IDImageProps) => {
                     )
                 }
 
-                <div
-                    className={clsx(styles.imageContainer__info, item.isVideo && styles.imageContainer__info__video)}>
+                <div className={clsx(styles.imageContainer__info, item.isVideo && styles.imageContainer__info__video)}>
 
                     <div>
                         {item.channel}

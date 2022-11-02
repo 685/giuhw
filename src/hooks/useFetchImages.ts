@@ -42,7 +42,9 @@ export default function useFetchImages({
         }
 
         fetchData()
-            .catch(console.error);
+            .catch((e) => {
+                throw new Error(e)
+            });
 
 
     }, [request, payload])

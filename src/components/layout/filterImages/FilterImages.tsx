@@ -62,7 +62,6 @@ const FilterImages = (
     }
 
     const removeFilter = (filter: TFilterIdDataType) => {
-        console.log("Removed", [filters])
         return () => setFilters(oldFilters => oldFilters.filter(item => item !== filter))
     }
 

@@ -78,7 +78,8 @@ export default async function handler(
         const validatedBody = validateData(body);
 
         if (validatedBody === false) {
-            res.status(400).json({error: 'Bad request'})
+            res.status(400).json({error: 'Validation error, data can\'t be' +
+                    ' resolved'})
             return;
         }
 
@@ -90,9 +91,8 @@ export default async function handler(
 
         if (response.status.toString().startsWith('2')) {
             const data = response.data as IFetchImagesResponse;
-            console.log(data);
             if (data.imageList.length < 1) {
-                res.status(404).json({error: 'Not found'})
+                res.status(404).json({error: 'No images found'})
                 return;
             }
 
