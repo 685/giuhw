@@ -10,10 +10,10 @@ import {Pagination} from "./ui/Pagination/Pagination";
 
 
 interface IDisplayImagesProps {
-
+    userAdult: boolean;
 }
 
-export function DisplayImages({}: IDisplayImagesProps) {
+export function DisplayImages({userAdult}: IDisplayImagesProps) {
 
     const baseImagesAmount = 30;
 
@@ -81,7 +81,7 @@ export function DisplayImages({}: IDisplayImagesProps) {
                     >
                         {
                             !displayLoading && currentItems?.map((item: IImageItem) => (
-                                <DImage key={item.id} item={item} w={300} h={300}/>
+                                <DImage key={item.id} item={item} userAdult={userAdult}/>
                             ))
                         }
                     </motion.div>

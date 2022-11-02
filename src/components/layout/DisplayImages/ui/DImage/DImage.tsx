@@ -9,56 +9,23 @@ import clsx from "clsx";
 
 interface IDImageProps {
     item: IImageItem;
-    w: string | number;
-    h: string | number;
-    className?: string;
+    userAdult: boolean;
 }
 
-// const useStyles = makeStyles((theme: any) => ({
-//     gridList: {
-//         flexWrap: "nowrap",
-//         transform: "translateZ(0)"
-//     },
-//     modal: {
-//         display: "flex",
-//         alignItems: "center",
-//         justifyContent: "center",
-//         "&:hover": {
-//             backgroundcolor: "red"
-//         }
-//     },
-//     img: {
-//         outline: "none"
-//     }
-// }));
-//
-// const Item = ({item, w, h, className}: IDImageProps) => {
-//
-//     if (item.isVideo) {
-//         return <video>
-//             <source src={item.url} type="video/mp4"/>
-//         </video>
-//     }
-//     return <Image src={item.url} alt={item.author} className={className}
-//                   layout={"fill"}/>
-//
-// }
 
-const DImage = ({item, w, h}: IDImageProps) => {
-    // const classes = useStyles()
-    // const [open, setOpen] = useState(false);
-    // const handleOpen = () => !item.isVideo ? setOpen(true) : "";
-    // const handleClose = () => setOpen(false);
+const DImage = ({item, userAdult}: IDImageProps) => {
 
     const [isZoomed, setIsZoomed] = useState(false)
 
     const handleZoomChange = useCallback((shouldZoom: boolean | ((prevState: boolean) => boolean)) => {
-        setIsZoomed(shouldZoom)
-    }, [])
+        setIsZoomed(userAdult ? shouldZoom : false)
+    }, [userAdult])
 
 
     return (<>
-            <div className={styles.imageContainer} data-zoomed={isZoomed}>
+            <div
+                className={clsx(styles.imageContainer, !userAdult && styles.imageContainer__notAnAdult)}
+                data-zoomed={isZoomed}>
                 <ControlledZoom isZoomed={isZoomed}
                                 onZoomChange={handleZoomChange}
                                 classDialog={styles.dialog}
@@ -68,7 +35,7 @@ const DImage = ({item, w, h}: IDImageProps) => {
                         &&
                         <Image src={item.url} layout={"responsive"}
                                height={"500px"} width={500}
-                               alt={`Image ${w} ${h}`}
+                               alt={`Image ${item}`}
                                priority={true}
 
                         />
@@ -79,12 +46,13 @@ const DImage = ({item, w, h}: IDImageProps) => {
                 {
                     item.isVideo && (
                         <>
-                            <video src={item.url} controls={true}></video>
+                            <video src={item.url} controls={userAdult}></video>
                         </>
                     )
                 }
 
-                <div className={clsx(styles.imageContainer__info, item.isVideo && styles.imageContainer__info__video)}>
+                <div
+                    className={clsx(styles.imageContainer__info, item.isVideo && styles.imageContainer__info__video)}>
 
                     <div>
                         {item.channel}
@@ -97,45 +65,6 @@ const DImage = ({item, w, h}: IDImageProps) => {
 
                 </div>
             </div>
-            {/*<div className={styles.imageContainer} onClick={handleOpen}*/}
-            {/*     data-notmodal={true}>*/}
-            {/*    <Item h={h} w={w} item={item} className={styles.DImage__image}/>*/}
-
-            {/*    {item.isVideo && (*/}
-            {/*        <div className={styles.isVideo}>*/}
-            {/*            <div className={styles.isVideo__text}>*/}
-            {/*                Video*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    )}*/}
-            {/*    <div className={styles.imageContainer__info}>*/}
-
-            {/*        <div className={styles.imageContainer__info__category}>*/}
-
-            {/*            {item.category}*/}
-            {/*            {item.channel}*/}
-
-            {/*        </div>*/}
-
-            {/*    </div>*/}
-
-
-            {/*</div>*/}
-            {/*<Modal*/}
-            {/*    className={classes.modal}*/}
-            {/*    open={open}*/}
-            {/*    onClose={handleClose}*/}
-            {/*    closeAfterTransition*/}
-            {/*>*/}
-            {/*    <Fade in={open} timeout={500}>*/}
-            {/*        <Image*/}
-            {/*            alt={item.channel}*/}
-            {/*            src={item.url}*/}
-            {/*            width={"90vw"}*/}
-            {/*            height={"90vh"}*/}
-            {/*        />*/}
-            {/*    </Fade>*/}
-            {/*</Modal>*/}
         </>
     )
 }

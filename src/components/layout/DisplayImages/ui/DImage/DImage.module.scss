@@ -36,6 +36,12 @@ $gradient: linear-gradient(
     flex: 1 0 16rem;
   }
 
+  &__notAnAdult {
+    img, video {
+      filter: blur(40px);
+    }
+  }
+
   img, video {
     display: block;
     width: 100%;

@@ -8,6 +8,8 @@ specifiers:
   '@mui/icons-material': ^5.10.9
   '@mui/material': ^5.10.9
   '@mui/styles': ^5.10.9
+  '@react-buddy/ide-toolbox': ^2.2.1
+  '@react-buddy/palette-mui': ^1.2.2
   '@types/node': 18.8.3
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -33,6 +35,8 @@ dependencies:
   '@mui/icons-material': 5.10.9_6usjrp3ypnzobhq35dcwvjrt3m
   '@mui/material': 5.10.9_ikcgkdnp4bn3rgptamntbhbo7e
   '@mui/styles': 5.10.9_iapumuv4e6jcjznwuxpf4tt22e
+  '@react-buddy/ide-toolbox': 2.2.1_react@18.2.0
+  '@react-buddy/palette-mui': 1.2.2_tziw4daglcpiallgmmcb7xq53y
   axios: 1.1.2
   clsx: 1.2.1
   framer-motion: 7.6.1_biqbaboplfbrettd7655fr4n2y
@@ -907,6 +911,28 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@react-buddy/ide-toolbox/2.2.1_react@18.2.0:
+    resolution: {integrity: sha512-oQWiiY0MJKeeHjW0wm6mO4ebarUdAW5z2g2p3gY5lF4ybDqm6CSU0oA9A6VFqGHLyG93w9W6rvRt/Ajd5cNNAQ==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /@react-buddy/palette-mui/1.2.2_tziw4daglcpiallgmmcb7xq53y:
+    resolution: {integrity: sha512-wqzE7bbaJ6NnXCSMwXrs7uvfkKpEsvaaC8aLpfChzu0iRsiSl/8rA53drS1E76AqVf8ySEGc3OJtFGtu2Z2hPA==}
+    peerDependencies:
+      '@mui/icons-material': ^5.0.1
+      '@mui/material': ^5.0.1
+      '@react-buddy/ide-toolbox': ^2.0.0
+      react: ^17.0.0 || ^18.0.0
+    dependencies:
+      '@mui/icons-material': 5.10.9_6usjrp3ypnzobhq35dcwvjrt3m
+      '@mui/material': 5.10.9_ikcgkdnp4bn3rgptamntbhbo7e
+      '@react-buddy/ide-toolbox': 2.2.1_react@18.2.0
+      react: 18.2.0
     dev: false
 
   /@rushstack/eslint-patch/1.2.0:
