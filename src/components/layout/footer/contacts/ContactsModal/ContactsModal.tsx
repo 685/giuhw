@@ -45,9 +45,8 @@ export function ContactsModal({opened, handleClose}: ContactsModalProps) {
                     <div className={styles.fields}>
                         <ContactsField title={"Email"}
                                        value={"exampleemail@gmail.com"}
-                                       Icon={EmailIcon} link={true}
-                                       linkTo={"https://gmail.com/"}
-                                       newTab={true}/>
+                                       Icon={EmailIcon}/>
+
                         <ContactsField title={"My Discord"}
                                        value={"Giuliano#0001"} Icon={DiscordSvg}
                                        link={true}

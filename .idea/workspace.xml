@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - Some build bug">
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +141,7 @@
       <workItem from="1667147712595" duration="6349000" />
       <workItem from="1667394470602" duration="811000" />
       <workItem from="1667490612724" duration="4417000" />
-      <workItem from="1667651586425" duration="7972000" />
+      <workItem from="1667651586425" duration="8226000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -333,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667656992160</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary=".">
+      <created>1667659957918</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667659957918</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +371,6 @@
     <MESSAGE value="[FIX] - Spelling" />
     <MESSAGE value="[CHANGE] - Seo moved to _app component &#10;[FIXED] - video displaying" />
     <MESSAGE value="[FIX] - Filters cats fixes&#10;[ADD] - Advertisement component" />
-    <MESSAGE value="." />
     <MESSAGE value="[FIX] - Icon" />
     <MESSAGE value="[FIX] - Bundle size and optimization" />
     <MESSAGE value="[CHANGE] - Started preloading images" />
@@ -373,6 +378,7 @@
     <MESSAGE value="[FIX] - http getting error" />
     <MESSAGE value="[ADD] Contact me modal&#10;[ADD] - Automatically opens category when one of it's children is chosen" />
     <MESSAGE value="[FIX] - Some build bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - Some build bug" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
