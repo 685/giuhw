@@ -11,6 +11,7 @@ import {
     FormControlLabel,
     FormGroup
 } from "@mui/material";
+
 type IFilterActionFunctionType = (filter: TFilterIdDataType) => () => void;
 
 
@@ -37,7 +38,17 @@ export const FilterCategory = ({
 
     }
 
-    const [opened, setOpened] = useState(false);
+     const checkIsChosen = () => {
+        let thisCategoryFilters = Array.from(filters.map(filter => filter.id));
+
+        // check if one of the assigned filters is in this category
+        return thisCategoryFilters.some(filter => assignedFilters.includes(filter))
+
+    }
+
+    const [opened, setOpened] = useState<boolean>(checkIsChosen);
+
+
 
     return (
         <div className={styles.category}>

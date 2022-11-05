@@ -3,17 +3,33 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
   font-size: 1.1rem;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
 
   svg {
     color: var(--discord-btn-color);
   }
 
 
+  & > * {
+    margin-left: .2rem;
+  }
+
   &__copyright {
     letter-spacing: .05rem;
+    display: flex;
+    flex-direction: row;
+
+    & > * {
+      display: block;
+    }
 
     &__hw {
       color: var(--text-primary);
@@ -21,6 +37,16 @@
 
   }
 
+  &__contact {
+    margin-top: .4rem;
+    text-align: center;
+
+    span {
+      cursor: pointer;
+
+    }
+
+  }
 
 
 }

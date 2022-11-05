@@ -22,11 +22,10 @@ a {
   min-height: 100vh;
   overflow: hidden;
 
+
   &:not(:has(div.advertisement)) {
     padding-top: 18vh;
   }
-
-
 
 
 }
@@ -35,7 +34,7 @@ a {
 .container {
   max-width: 70vw;
   margin: 2rem auto;
-
+  flex: 1 1 auto;
 
   @media screen and (max-width: 700px) {
     max-width: 90vw;

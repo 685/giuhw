@@ -156,7 +156,7 @@ const FilterImages = (
 
                         {
                             Object.keys(filterOptions).map((key, index) => (
-                                <>
+                                <span key={index}>
                                     <Divider light
                                              style={{marginBottom: ".4rem"}}/>
 
@@ -165,7 +165,7 @@ const FilterImages = (
                                                     removeFilter={removeFilter}
                                                     filters={filterOptions[`${key}`]}
                                                     title={`${key}`}/>
-                                </>
+                                </span>
                             ))
                         }
 

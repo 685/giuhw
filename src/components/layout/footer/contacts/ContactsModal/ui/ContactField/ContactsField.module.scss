@@ -1,0 +1,56 @@
+.field {
+
+  color: var(--text-secondary);
+
+  margin-bottom: 20px;
+
+  &__head {
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    align-content: center;
+
+
+    &__icon {
+      font-size: 1.5rem;
+      margin-right: .5rem;
+      width: 24px;
+      aspect-ratio: 1 / 1;
+    }
+
+    &__title {
+      font-weight: 500;
+
+      text-transform: capitalize;
+    }
+
+
+  }
+
+  &__info {
+    margin-top: .5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+
+
+    &__value {
+      color: var(--text-primary);
+    }
+
+    &__link {
+
+      color: var(--text-secondary);
+      cursor: pointer;
+
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        color: var(--discord-btn-color);
+      }
+
+    }
+
+  }
+
+}
