@@ -32,7 +32,7 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
 
         if (loading) {
             setDisplayLoading(true);
-        } else if (data === null || currentItems === null) {
+        } else if (data === null) {
             setDisplayLoading(true);
         } else {
             setDisplayLoading(false);
@@ -84,6 +84,17 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
                                 <DImage key={item.id} item={item} userAdult={userAdult}/>
                             ))
                         }
+
+
+                        {
+                            currentItems?.length === 0 || currentItems == null && (
+                                <div className={styles.noImages}>
+                                    <h1>No images found</h1>
+                                </div>
+                            )
+                        }
+
+
                     </motion.div>
                 </AnimatePresence>
 
@@ -98,7 +109,7 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
             </div>
 
             {
-                data !== null && (
+                data !== null && !displayLoading && !(currentItems?.length === 0 || currentItems == null) && (
                     <Pagination setOffset={setOffset} offset={payload._offset}
                                 maxPage={data?.pageCount}/>
                 )
