@@ -98,7 +98,7 @@ export function DisplayImages({userAdult, setUserAdult}: IDisplayImagesProps) {
 
 
                         {
-                            currentItems?.length === 0 || currentItems == null && (
+                            (currentItems?.length === 0 || currentItems == null) && userAdult && (
                                 <div className={styles.noImages}>
                                     <h1>No images found</h1>
                                 </div>
