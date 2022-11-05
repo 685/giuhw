@@ -14,17 +14,29 @@ const Images: NextPage = () => {
         }
     )
 
+    // uselocalstorage hook for cookies
+    const {
+        value: useLocalAllowed,
+        setValue: setUseLocalAllowed
+    } = useLocalStorage({
+        key: "_uls",
+        initialValue: false
+    })
+
 
     return (
         <>
-            <DisplayImages userAdult={userAdult as boolean}/>
-            <Snackbar open={!userAdult} autoHideDuration={null}
-                      onClose={() => setUserAdult(true)}>
+            <DisplayImages userAdult={userAdult as boolean}
+                           setUserAdult={setUserAdult}/>
+            <Snackbar open={!useLocalAllowed} autoHideDuration={null}
+                      onClose={() => setUseLocalAllowed(true)}>
                 <Alert onClose={() => {
-                    setUserAdult(true)
-                }} severity="warning"
+                    setUseLocalAllowed(true)
+                }} severity="info"
                        sx={{width: '100%'}}>
-                    This website contains <b>adult</b> content. By using this website, you represent that you are <b>18 years of age or older</b>.
+                    This website may use <b>`cookies/LocalStorage`</b> to provide you with a better
+                    user experience. By using this website, you agree to the use of
+                    cookies.
                 </Alert>
             </Snackbar>
         </>

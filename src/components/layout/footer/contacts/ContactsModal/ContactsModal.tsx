@@ -40,8 +40,10 @@ export function ContactsModal({opened, handleClose}: ContactsModalProps) {
             <Fade in={opened}>
                 <Box sx={style}>
                     <h2 id="modal-modal-title"
-                        className={styles.modal__title}>Ways you can contact
-                        me</h2>
+                        className={styles.modal__title}
+                    >
+                        Ways you can contact me
+                    </h2>
                     <div className={styles.fields}>
                         <ContactsField title={"Email"}
                                        value={"exampleemail@gmail.com"}

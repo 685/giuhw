@@ -29,6 +29,37 @@
 
 }
 
+.adultWarning {
+  padding: .25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    color: var(--text-secondary);
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+
+    b {
+      color: red;
+    }
+  }
+
+  button {
+    background-color: var(--discord-btn-color) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    max-width: max-content !important;
+
+    &:hover {
+      background-color: rgb(69, 79, 191) !important;
+    }
+  }
+}
+
 .loading {
   position: absolute;
   top: 50%;

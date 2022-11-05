@@ -23,6 +23,7 @@ interface IFilterImagesProps {
     filters: IFilterOptions;
 
     loading: boolean;
+    userAdult: boolean;
     error: null | any;
 }
 
@@ -43,7 +44,7 @@ const FilterLoading = () => {
 }
 
 const FilterImages = (
-    {change, filters: filterOptions, loading, error,}: IFilterImagesProps
+    {change, filters: filterOptions, loading, error, userAdult}: IFilterImagesProps
 ) => {
     // Just saves some data, and calls `change` function on submit button click 
 
@@ -132,16 +133,16 @@ const FilterImages = (
                                 color={"info"} style={{
                             backgroundColor: "limegreen",
                         }} className={styles.button}
-                                disabled={!isChanged}>
+                                disabled={!isChanged || !userAdult}>
                             <Check/>
                         </Button>
                     </motion.div>
 
-                    <ImagesAmount disabled={loading} max={100} min={10} step={5}
+                    <ImagesAmount disabled={loading || !userAdult} max={100} min={10} step={5}
                                   currentState={amount}
                                   onChange={(value) => setAmount(value)}/>
                     {
-                        loading && (
+                        loading  && (
                             <>
                                 <FilterLoading/>
                                 <FilterLoading/>
@@ -164,7 +165,7 @@ const FilterImages = (
                                                     addFilter={addFilter}
                                                     removeFilter={removeFilter}
                                                     filters={filterOptions[`${key}`]}
-                                                    title={`${key}`}/>
+                                                    title={`${key}`} disabled={!userAdult}/>
                                 </span>
                             ))
                         }

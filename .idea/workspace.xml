@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DisplayImages/DisplayImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +146,7 @@
       <workItem from="1667147712595" duration="6349000" />
       <workItem from="1667394470602" duration="811000" />
       <workItem from="1667490612724" duration="4417000" />
-      <workItem from="1667651586425" duration="8226000" />
+      <workItem from="1667651586425" duration="10852000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -339,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667659957918</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary=".">
+      <created>1667660213060</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667660213060</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

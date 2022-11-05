@@ -18,6 +18,7 @@ type IFilterActionFunctionType = (filter: TFilterIdDataType) => () => void;
 interface IFilterCategoryProps {
     filters: IFilterOption[];
     title: string;
+    disabled: boolean;
     assignedFilters: TFilterIdDataType[];
     addFilter: IFilterActionFunctionType;
     removeFilter: IFilterActionFunctionType;
@@ -29,6 +30,7 @@ export const FilterCategory = ({
                                    assignedFilters,
                                    addFilter,
                                    removeFilter,
+                                   disabled
                                }: IFilterCategoryProps) => {
 
     const toggleFilter = (filter: TFilterIdDataType): () => void => {
@@ -38,7 +40,7 @@ export const FilterCategory = ({
 
     }
 
-     const checkIsChosen = () => {
+    const checkIsChosen = () => {
         let thisCategoryFilters = Array.from(filters.map(filter => filter.id));
 
         // check if one of the assigned filters is in this category
@@ -47,7 +49,6 @@ export const FilterCategory = ({
     }
 
     const [opened, setOpened] = useState<boolean>(checkIsChosen);
-
 
 
     return (
@@ -77,7 +78,7 @@ export const FilterCategory = ({
                                 return (<FormControlLabel key={index}
                                                           control={<Checkbox
                                                               onChange={toggleFilter(_.id)}
-                                                              defaultChecked={assignedFilters.includes(_.id)}/>}
+                                                              defaultChecked={assignedFilters.includes(_.id)} disabled={disabled}/>}
                                                           label={_.name}/>)
                             }
                         )}

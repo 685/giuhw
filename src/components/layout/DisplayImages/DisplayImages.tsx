@@ -4,16 +4,17 @@ import DImage from "@/components/layout/DisplayImages/ui/DImage/DImage";
 import styles from "./DisplayImages.module.scss";
 import useFetchImages from "@/hooks/useFetchImages";
 import FilterImages from "@/components/layout/filterImages/FilterImages";
-import {CircularProgress} from "@mui/material";
+import {Button, CircularProgress} from "@mui/material";
 import {AnimatePresence, motion} from "framer-motion";
 import {Pagination} from "./ui/Pagination/Pagination";
 
 
 interface IDisplayImagesProps {
     userAdult: boolean;
+    setUserAdult: (value: boolean) => void;
 }
 
-export function DisplayImages({userAdult}: IDisplayImagesProps) {
+export function DisplayImages({userAdult, setUserAdult}: IDisplayImagesProps) {
 
     const baseImagesAmount = 30;
 
@@ -55,7 +56,7 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
         <div className={styles.dImages}>
             {data !== null && (
                 <FilterImages filters={data.filterOptions} change={change}
-                              loading={loading} error={error}/>
+                              loading={loading} error={error} userAdult={userAdult}/>
 
             )}
 
@@ -64,7 +65,7 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
 
                 <AnimatePresence>
                     <motion.div
-                        key={`${displayLoading}`}
+                        key={`${displayLoading}${userAdult}`}
                         animate="animate"
                         initial="initial"
                         variants={{
@@ -80,9 +81,19 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
                         className={styles.imagesGrid}
                     >
                         {
-                            !displayLoading && currentItems?.map((item: IImageItem) => (
+                            !displayLoading && userAdult && currentItems?.map((item: IImageItem) => (
                                 <DImage key={item.id} item={item} userAdult={userAdult}/>
                             ))
+                        }
+
+                        {
+                            !userAdult && (
+                                <div className={styles.adultWarning}>
+                                    <h1>Adult content</h1>
+                                    <p>This website contains <b>adult</b> content. By clicking <b>`yes`</b>, you represent that you are <b>18 years of age or older</b>.</p>
+                                    <Button onClick={() => setUserAdult(true)}>Yes</Button>
+                                </div>
+                            )
                         }
 
 
@@ -93,6 +104,8 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
                                 </div>
                             )
                         }
+
+
 
 
                     </motion.div>
@@ -109,7 +122,7 @@ export function DisplayImages({userAdult}: IDisplayImagesProps) {
             </div>
 
             {
-                data !== null && !displayLoading && !(currentItems?.length === 0 || currentItems == null) && (
+                data !== null && !displayLoading && !(currentItems?.length === 0 || currentItems == null) && userAdult && (
                     <Pagination setOffset={setOffset} offset={payload._offset}
                                 maxPage={data?.pageCount}/>
                 )
