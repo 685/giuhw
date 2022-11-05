@@ -1,7 +1,7 @@
-
-interface IconProps {
-    className: string;
+export interface IconProps {
+    className?: string;
 }
+
 export function DiscordSvg({className}: IconProps) {
 
 
@@ -10,7 +10,7 @@ export function DiscordSvg({className}: IconProps) {
              strokeWidth="0" viewBox="0 0 16 16"
              height="1em" width="1em"
              xmlns="http://www.w3.org/2000/svg"
-        className={className}>
+             className={className}>
             <path
                 d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"></path>
             <path

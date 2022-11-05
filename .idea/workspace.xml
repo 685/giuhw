@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[FIX] - http getting error">
-      <change afterPath="$PROJECT_DIR$/pages/contacts/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ContactsModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ui/ContactField/ContactsField.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/contacts/ContactsModal/ui/ContactField/ContactsField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/DiscordSvg.tsx" afterDir="false" />
+    <list default="true" id="58f7f5d7-d9f8-4d5a-ac91-e6ce5ef89d3b" name="Changes" comment="[ADD] Contact me modal&#10;[ADD] - Automatically opens category when one of it's children is chosen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/FilterImages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/filterImages/ui/FilterCategory/FilterCategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contacts/index.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/DiscordSvg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/DiscordSvg.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +143,7 @@
       <workItem from="1667147712595" duration="6349000" />
       <workItem from="1667394470602" duration="811000" />
       <workItem from="1667490612724" duration="4417000" />
-      <workItem from="1667651586425" duration="4547000" />
+      <workItem from="1667651586425" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="[START] - INIT">
       <created>1666019598750</created>
@@ -329,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667339101935</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="[ADD] Contact me modal&#10;[ADD] - Automatically opens category when one of it's children is chosen">
+      <created>1667656307618</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1667656307618</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +365,7 @@
     <MESSAGE value="[CHANGE] - Started preloading images" />
     <MESSAGE value="[ADD] - Data preload" />
     <MESSAGE value="[FIX] - http getting error" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] - http getting error" />
+    <MESSAGE value="[ADD] Contact me modal&#10;[ADD] - Automatically opens category when one of it's children is chosen" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Contact me modal&#10;[ADD] - Automatically opens category when one of it's children is chosen" />
   </component>
 </project>
